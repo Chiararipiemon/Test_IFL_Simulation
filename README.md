@@ -4,6 +4,7 @@ Load the directory ***iiwa_probe_utils***. The directory should be inside iiwa_s
 My Segmentation_decimated_better.stl file is loaded inside ~/Documents
 
 ## Spawning of manipulator + bed + robot pedestal
+There's problably collision between base link and robot pedestal, to fix it
 ```
 source ~/iiwa_stack_ws/devel/setup.bash
 
