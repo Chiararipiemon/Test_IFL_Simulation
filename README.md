@@ -20,7 +20,7 @@ ROS_NAMESPACE=iiwa rosrun iiwa_probe_utils attach_probe_collision.py \
   _z_offset:=0.03
 ```
 -----------------------------------------------------------------------------------------------------
-## Load file rosbag
+## Start loading file rosbag
 ```
 source ~/iiwa_stack_ws/devel/setup.bash
 rosbag record -O sweep_$(date +%F_%H%M%S).bag --lz4 \
