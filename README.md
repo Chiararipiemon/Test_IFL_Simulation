@@ -1,5 +1,5 @@
 # Test_IFL_Simulation
-## Spawning di manipolaore+ lettino + piedistallo robot
+## Spawning of manipulator + bed + robot pedestal
 source ~/iiwa_stack_ws/devel/setup.bash
 
 roslaunch iiwa_probe_utils demo_with_tool_env_iiwa_stack.launch \
@@ -15,6 +15,7 @@ ROS_NAMESPACE=iiwa rosrun iiwa_probe_utils attach_probe_collision.py \
   _length:=0.16 \
   _radius:=0.03 \
   _z_offset:=0.03
+
 -----------------------------------------------------------------------------------------------------
 ## file rosbag
 
