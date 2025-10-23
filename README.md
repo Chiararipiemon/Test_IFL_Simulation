@@ -22,7 +22,7 @@ ROS_NAMESPACE=iiwa rosrun iiwa_probe_utils attach_tool_mesh.py \
   _mesh_path:=/home/chiararipiemo/iiwa_stack_ws/src/iiwa_probe_utils/probe_urdf/IFL_FrankaHolder.dae \
   _link_name:=iiwa_link_ee \
   _name:=probe_holder \
-  _x:=0.00 _y:=0.00 _z:=-0.12 \
+  _x:=0.00 _y:=0.00 _z:=-0.10 \
   _roll_deg:=0 _pitch_deg:=0 _yaw_deg:=0 \
   _scale_x:=1.0 _scale_y:=1.0 _scale_z:=1.0
 ```
