@@ -1,5 +1,8 @@
 # Test_IFL_Simulation
-The directory iiwa_probe_utils should be inside iiwa_stack/src
+Load the directory ***iiwa_probe_utils***. The directory should be inside iiwa_stack/src.
+
+My Segmentation_decimated_better.stl file is loaded inside ~/Documents
+
 ## Spawning of manipulator + bed + robot pedestal
 ```
 source ~/iiwa_stack_ws/devel/setup.bash
