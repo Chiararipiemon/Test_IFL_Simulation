@@ -44,7 +44,7 @@ Change the mesh path
 ROS_NAMESPACE=iiwa rosrun iiwa_probe_utils add_patient_mesh_on_table.py \
 _mesh_path:=/home/$USER/Documenti/Segmentation_decimated_better.stl \
 _frame_id:=world \
-_x:=0.90 _y:=-0.20 \
+_x:=0.81 _y:=-0.20 \
 _roll_deg:=90 _pitch_deg:=0 \
 _align_mesh_yaw_with_table:=true \
 _z_lift:=0.12 \
