@@ -3,7 +3,9 @@
 source ~/iiwa_stack_ws/devel/setup.bash
 
 roslaunch iiwa_probe_utils demo_with_tool_env_iiwa_stack.launch \
+
   model:=iiwa14 robot_name:=iiwa rviz:=true L_tip:=0.12 \
+  
   table_yaw:=1.5708
 
 -----------------------------------------------------------------------------------------------------
