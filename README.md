@@ -14,11 +14,11 @@ roslaunch iiwa_probe_utils demo_with_tool_env_iiwa_stack.launch \
 
 -----------------------------------------------------------------------------------------------------
 ## Attach the probe 
+Change the _mesh_path
 ```
 source ~/iiwa_stack_ws/devel/setup.bash
 
 ROS_NAMESPACE=iiwa rosrun iiwa_probe_utils attach_tool_mesh.py \
-#Change this path
   _mesh_path:=/home/chiararipiemo/iiwa_stack_ws/src/iiwa_probe_utils/probe_urdf/IFL_FrankaHolder.dae \
   _link_name:=iiwa_link_ee \
   _name:=probe_holder \
