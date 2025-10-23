@@ -40,5 +40,5 @@ _roll_deg:=90 _pitch_deg:=0 \
 _align_mesh_yaw_with_table:=true \
 _z_lift:=0.12 \
 _scale_x:=1.0 _scale_y:=1.0 _scale_z:=1.0
-<img width="1850" height="1031" alt="immagine" src="https://github.com/user-attachments/assets/a892c7d0-ecb9-48fb-a5c3-05e8b80cd3d8" />
 ```
+<img width="1850" height="1031" alt="immagine" src="https://github.com/user-attachments/assets/a892c7d0-ecb9-48fb-a5c3-05e8b80cd3d8" />
