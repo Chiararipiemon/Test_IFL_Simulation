@@ -41,6 +41,7 @@ rosbag record -O sweep_$(date +%F_%H%M%S).bag --lz4 \
 ## Spawning patient's skin surface mesh (around 4000 triangles) on the bad
 ```
 ROS_NAMESPACE=iiwa rosrun iiwa_probe_utils add_patient_mesh_on_table.py \
+#Change this path
 _mesh_path:=/home/$USER/Documenti/Segmentation_decimated_better.stl \
 _frame_id:=world \
 _x:=0.90 _y:=-0.20 \
