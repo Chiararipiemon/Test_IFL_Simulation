@@ -1,4 +1,5 @@
 # Test_IFL_Simulation
+The directory iiwa_probe_utils should be inside iiwa_stack/src
 ## Spawning of manipulator + bed + robot pedestal
 ```
 source ~/iiwa_stack_ws/devel/setup.bash
