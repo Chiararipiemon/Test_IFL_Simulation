@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- ====== Args (same as your original) ====== -->
+  <arg name="model" default="iiwa14"/>
+  <arg name="rviz" default="true"/>
+  <arg name="L_tip" default="0.12"/>
+  <arg name="world_frame" default="world"/>
+  <arg name="moveit_ns" default="iiwa"/>  
+  
+  <!-- ====== Include your original launch (brings up move_group/RViz) ====== -->
+  <include file="$(find iiwa_probe_utils)/launch/demo_with_tool.launch">
+    <arg name="model" value="$(arg model)"/>
+    <arg name="rviz"  value="$(arg rviz)"/>
+    <arg name="L_tip" value="$(arg L_tip)"/>
+  </include>
+
+  <!-- ====== Spawn static environment in MoveIt PlanningScene ====== -->
+  <node pkg="iiwa_probe_utils" type="spawn_static_scene.py" name="spawn_static_scene" output="screen">
+    <param name="world_frame" value="$(arg world_frame)"/>
+    <param name="moveit_ns"   value="$(arg moveit_ns)"/>
+
+    <!-- Pedestal -->
+    <param name="pedestal_size" value="0.60"/>
+    <param name="pedestal_z_top" value="0.0"/>
+
+    <!-- Patient table in front of robot (+X) -->
+    <param name="table_length" value="1.80"/>
+    <param name="table_width"  value="0.60"/>
+    <param name="table_height" value="0.75"/>
+    <param name="table_x"      value="0.90"/>
+    <param name="table_y"      value="0.00"/>
+    <param name="table_yaw"    value="0.00"/>
+  </node>
+</launch>

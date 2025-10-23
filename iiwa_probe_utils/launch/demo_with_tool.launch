@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="model" default="iiwa14"/>
+  <arg name="robot_name" default="iiwa"/>
+  <arg name="rviz" default="true"/>
+  <!-- distanza tool0 -> tip (m) -->
+  <arg name="L_tip" default="0.12"/>
+
+  <!-- Stack MoveIt (fake execution + RViz) di iiwa_stack -->
+  <include file="$(find iiwa_moveit)/launch/demo.launch">
+    <arg name="rviz" value="$(arg rviz)"/>
+    <arg name="robot_name" value="$(arg robot_name)"/>
+    <arg name="model" value="$(arg model)"/>
+  </include>
+
+  <!-- Ancoraggi TF fondamentali -->
+  <!-- world -> iiwa_link_0 (identità) -->
+  <node pkg="tf2_ros" type="static_transform_publisher" name="world_to_base"
+        args="0 0 0 0 0 0 1 world iiwa_link_0"/>
+  <!-- iiwa_link_ee -> tool0 (identità) -->
+  <node pkg="tf2_ros" type="static_transform_publisher" name="ee_to_tool0"
+        args="0 0 0 0 0 0 1 iiwa_link_ee tool0"/>
+  <!-- tool0 -> probe_tip (offset lungo +Z del tool) -->
+  <node pkg="tf2_ros" type="static_transform_publisher" name="tool0_to_probe"
+        args="0 0 $(arg L_tip) 0 0 0 1 tool0 probe_tip"/>
+</launch>
+

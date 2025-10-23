@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- args -->
+  <arg name="model" default="iiwa14"/>
+  <arg name="robot_name" default="iiwa"/>
+  <arg name="rviz" default="true"/>
+  <arg name="L_tip" default="0.12"/>
+  <!-- env geometry params -->
+  <arg name="pedestal_size" default="0.60"/>
+  <arg name="table_length" default="1.80"/>
+  <arg name="table_width"  default="0.60"/>
+  <arg name="table_height" default="0.75"/>
+  <arg name="table_x"      default="0.90"/>
+  <arg name="table_y"      default="0.00"/>
+  <arg name="table_yaw"    default="0.00"/>
+  <arg name="world_frame"  default="world"/>
+
+  <!-- iiwa_stack MoveIt demo -->
+  <include file="$(find iiwa_moveit)/launch/demo.launch">
+    <arg name="rviz" value="$(arg rviz)"/>
+    <arg name="robot_name" value="$(arg robot_name)"/>
+    <arg name="model" value="$(arg model)"/>
+  </include>
+
+  <!-- static TF anchors -->
+  <node pkg="tf2_ros" type="static_transform_publisher" name="world_to_base"
+        args="0 0 0 0 0 0 1 $(arg world_frame) iiwa_link_0"/>
+  <node pkg="tf2_ros" type="static_transform_publisher" name="ee_to_tool0"
+        args="0 0 0 0 0 0 1 iiwa_link_ee tool0"/>
+  <node pkg="tf2_ros" type="static_transform_publisher" name="tool0_to_probe"
+        args="0 0 $(arg L_tip) 0 0 0 1 tool0 probe_tip"/>
+
+  <!-- scene spawner (uses MoveIt services under /$(arg robot_name)) -->
+  <node pkg="iiwa_probe_utils" type="spawn_static_scene_iiwa.py" name="spawn_static_scene" output="screen">
+    <param name="moveit_ns"   value="$(arg robot_name)"/>
+    <param name="world_frame" value="$(arg world_frame)"/>
+
+    <param name="pedestal_size" value="$(arg pedestal_size)"/>
+    <param name="pedestal_z_top" value="0.0"/>
+
+    <param name="table_length" value="$(arg table_length)"/>
+    <param name="table_width"  value="$(arg table_width)"/>
+    <param name="table_height" value="$(arg table_height)"/>
+    <param name="table_x"      value="$(arg table_x)"/>
+    <param name="table_y"      value="$(arg table_y)"/>
+    <param name="table_yaw"    value="$(arg table_yaw)"/>
+  </node>
+</launch>
