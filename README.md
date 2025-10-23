@@ -11,6 +11,7 @@ roslaunch iiwa_probe_utils demo_with_tool_env_iiwa_stack.launch \
 
 -----------------------------------------------------------------------------------------------------
 ## Attach the probe 
+For now is not the real probe
 ```
 source ~/iiwa_stack_ws/devel/setup.bash
 ROS_NAMESPACE=iiwa rosrun iiwa_probe_utils attach_probe_collision.py \
