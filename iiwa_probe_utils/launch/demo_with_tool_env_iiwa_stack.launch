@@ -10,7 +10,7 @@
   <arg name="table_length" default="1.80"/>
   <arg name="table_width"  default="0.60"/>
   <arg name="table_height" default="0.75"/>
-  <arg name="table_x"      default="0.90"/>
+  <arg name="table_x"      default="0.65"/>
   <arg name="table_y"      default="0.00"/>
   <arg name="table_yaw"    default="0.00"/>
   <arg name="world_frame"  default="world"/>
