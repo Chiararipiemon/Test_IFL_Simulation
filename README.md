@@ -64,7 +64,8 @@ rosbag record -O sweep_$(date +%F_%H%M%S).bag --lz4 \
   /iiwa/move_group/monitored_planning_scene
 ```
 -----------------------------------------------------------------------------------------------------
-## Lanciare il cloudpoint del paziente
+## Load skin cloudpoint 
+Change pdc_path with yours
 ```
 rosrun iiwa_probe_utils add_patient_cloud_on_table.py \
   _pcd_path:=/home/chiararipiemo/iiwa_stack_ws/src/iiwa_probe_utils/cloudpoint/Segmentation_decimated_better_points.pcd \
@@ -74,8 +75,8 @@ rosrun iiwa_probe_utils add_patient_cloud_on_table.py \
   _align_mesh_yaw_with_table:=false _table_yaw:=1.5708 \
   _z_lift:=0.12
 ```
-Se la nuvola non compare, andare sulla GU Moveit! --> add --> PointCloud2 e selezionare topic: /cloud_with_normals
-### Sovraporre le frecce delle normali
+If the point cloud doesn’t appear, go to the MoveIt! GUI → Add → PointCloud2 and select the topic: /cloud_with_normals
+### Overlay the normal arrows.
 ```
 source ~/iiwa_stack_ws/devel/setup.bash
 rosrun iiwa_probe_utils normals_markers_from_cloud.py \
@@ -84,7 +85,7 @@ rosrun iiwa_probe_utils normals_markers_from_cloud.py \
   _scale:=0.03 \
   _max_markers:=500
 ```
-<img width="1850" height="1031" alt="immagine" src="https://github.com/user-attachments/assets/a892c7d0-ecb9-48fb-a5c3-05e8b80cd3d8" />
+<img width="1849" height="1028" alt="immagine" src="https://github.com/user-attachments/assets/db837fcd-7828-4cbb-b427-32354cdedf74" />
 
 -----------------------------------------------------------------------------------------------------
 ## Execute rastr scan
