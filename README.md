@@ -1,4 +1,22 @@
 # Test_IFL_Simulation
+## Set up and requirements
+This repo works with Ubuntu 20.04 and ROS Noetic.
+### Load iiwa_stack
+#### Clone this repository to your workspace:
+mkdir iiwa_stack_ws && cd iiwa_stack_ws && mkdir src
+catkin_init_workspace
+git clone https://github.com/IFL-CAMP/iiwa_stack.git src/iiwa_stack
+
+#### Download the dependences :
+rosdep install --from-paths src --ignore-src -r -y
+
+#### Build the workspace :
+catkin build
+
+#### Source the workspace :
+source devel/setup.bash
+
+####Load the directory
 Load the directory ***iiwa_probe_utils***. The directory should be inside iiwa_stack/src.
 
 My Segmentation_decimated_better.stl file is loaded inside ~/Documents
