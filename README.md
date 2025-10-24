@@ -64,18 +64,6 @@ rosbag record -O sweep_$(date +%F_%H%M%S).bag --lz4 \
   /iiwa/move_group/monitored_planning_scene
 ```
 -----------------------------------------------------------------------------------------------------
-## Spawning patient's skin surface mesh (around 4000 triangles) on the bad
-Change the mesh path
-```
-ROS_NAMESPACE=iiwa rosrun iiwa_probe_utils add_patient_mesh_on_table.py \
-_mesh_path:=/home/$USER/Documenti/Segmentation_decimated_better.stl \
-_frame_id:=world \
-_x:=0.65 _y:=-0.20 \
-_roll_deg:=90 _pitch_deg:=0 \
-_align_mesh_yaw_with_table:=true \
-_z_lift:=0.22 \
-_scale_x:=1.0 _scale_y:=1.0 _scale_z:=1.0
-```
 ## Lanciare il cloudpoint del paziente
 ```
 rosrun iiwa_probe_utils add_patient_cloud_on_table.py \
