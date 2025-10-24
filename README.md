@@ -20,7 +20,7 @@ catkin build
 ```
 source devel/setup.bash
 ```
-####Load the directory
+#### Load the directory
 Load the directory ***iiwa_probe_utils***. The directory should be inside iiwa_stack/src.
 
 My Segmentation_decimated_better.stl file is loaded inside ~/Documents
