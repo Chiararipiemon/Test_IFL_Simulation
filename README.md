@@ -35,6 +35,7 @@ roslaunch iiwa_probe_utils demo_with_tool_env_iiwa_stack.launch \
   model:=iiwa14 robot_name:=iiwa rviz:=true L_tip:=0.12 \
   table_yaw:=1.5708
 ```
+<img width="351" height="307" alt="immagine" src="https://github.com/user-attachments/assets/9cede0b6-7f7d-42ce-8db9-07f3fb558de2" />
 
 -----------------------------------------------------------------------------------------------------
 ## Attach the probe 
