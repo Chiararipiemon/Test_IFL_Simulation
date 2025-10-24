@@ -55,3 +55,7 @@ _scale_x:=1.0 _scale_y:=1.0 _scale_z:=1.0
 
 -----------------------------------------------------------------------------------------------------
 ## Execute rastr scan
+```
+source ~/iiwa_stack_ws/devel/setup.bash
+ROS_NAMESPACE=iiwa rosrun iiwa_probe_utils go_to_preapproach_diagnose.py
+```
