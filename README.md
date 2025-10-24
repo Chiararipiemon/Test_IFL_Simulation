@@ -26,8 +26,7 @@ Load the directory ***iiwa_probe_utils***. The directory should be inside iiwa_s
 My Segmentation_decimated_better.stl file is loaded inside ~/Documents
 
 ## Spawning of manipulator + bed + robot pedestal
-There's problably collision between base link and robot pedestal, to fix it.
-Nota: piedistallo e lettino spawnano al di sotto del livello "virtuale" del pavimento di moveit!. Da codice sono riuscita ad alzare solo piedistallo e lettino ma il robot rimane sempre ancorato al pavimento perchè così è stato configurato dai creatori di iiwa_stack da cui prendo alcuni file e non ho trovato un modo per riuscirlo a spintare (sicuramente questa cosa è da fare in futuro se voglio perfezionare tutto, per ora mi accontento di ciò).
+
 ```
 source ~/iiwa_stack_ws/devel/setup.bash
 
@@ -35,6 +34,8 @@ roslaunch iiwa_probe_utils demo_with_tool_env_iiwa_stack.launch \
   model:=iiwa14 robot_name:=iiwa rviz:=true L_tip:=0.12 \
   table_yaw:=1.5708
 ```
+There's problably collision between base link and robot pedestal, to fix it.
+Note: the pedestal and the table spawn below MoveIt!’s “virtual” floor level. From code I managed to raise only the pedestal and the table, but the robot stays anchored to the floor because that’s how it was configured by the creators of iiwa_stack (which I’m using some files from), and I haven’t found a way to unpin it. This is definitely something to tackle in the future if I want to polish everything; for now I’m fine with it.
 <img width="351" height="307" alt="immagine" src="https://github.com/user-attachments/assets/9cede0b6-7f7d-42ce-8db9-07f3fb558de2" />
 
 -----------------------------------------------------------------------------------------------------
