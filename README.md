@@ -26,7 +26,8 @@ Load the directory ***iiwa_probe_utils***. The directory should be inside iiwa_s
 My Segmentation_decimated_better.stl file is loaded inside ~/Documents
 
 ## Spawning of manipulator + bed + robot pedestal
-There's problably collision between base link and robot pedestal, to fix it
+There's problably collision between base link and robot pedestal, to fix it.
+Nota: piedistallo e lettino spawnano al di sotto del livello "virtuale" del pavimento di moveit!. Da codice sono riuscita ad alzare solo piedistallo e lettino ma il robot rimane sempre ancorato al pavimento perchè così è stato configurato dai creatori di iiwa_stack da cui prendo alcuni file e non ho trovato un modo per riuscirlo a spintare (sicuramente questa cosa è da fare in futuro se voglio perfezionare tutto, per ora mi accontento di ciò).
 ```
 source ~/iiwa_stack_ws/devel/setup.bash
 
