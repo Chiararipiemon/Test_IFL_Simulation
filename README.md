@@ -53,6 +53,7 @@ ROS_NAMESPACE=iiwa rosrun iiwa_probe_utils attach_tool_mesh.py \
 ```
 -----------------------------------------------------------------------------------------------------
 ## Start loading file rosbag
+Work in progress, but for now is not the main problem
 ```
 source ~/iiwa_stack_ws/devel/setup.bash
 rosbag record -O sweep_$(date +%F_%H%M%S).bag --lz4 \
