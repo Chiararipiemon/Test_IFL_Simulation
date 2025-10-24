@@ -76,6 +76,16 @@ _align_mesh_yaw_with_table:=true \
 _z_lift:=0.22 \
 _scale_x:=1.0 _scale_y:=1.0 _scale_z:=1.0
 ```
+## Lanciare il cloudpoint del paziente
+```
+rosrun iiwa_probe_utils add_patient_cloud_on_table.py \
+  _pcd_path:=/home/chiararipiemo/iiwa_stack_ws/src/iiwa_probe_utils/cloudpoint/Segmentation_decimated_better_points.pcd \
+  _frame_id:=world \
+  _x:=0.65 _y:=-0.20 \
+  _roll_deg:=90 _pitch_deg:=0 \
+  _align_mesh_yaw_with_table:=false _table_yaw:=1.5708 \
+  _z_lift:=0.12
+```
 <img width="1850" height="1031" alt="immagine" src="https://github.com/user-attachments/assets/a892c7d0-ecb9-48fb-a5c3-05e8b80cd3d8" />
 
 -----------------------------------------------------------------------------------------------------
