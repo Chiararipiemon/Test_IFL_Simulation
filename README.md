@@ -88,7 +88,7 @@ rosrun iiwa_probe_utils normals_markers_from_cloud.py \
 
 -----------------------------------------------------------------------------------------------------
 ## Execute raster scan
-Work in progress
+**Work in progress**
 
 Voglio in qualche modo ottenere un codice che faccia queste cose:
 
