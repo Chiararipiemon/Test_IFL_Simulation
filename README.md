@@ -1,6 +1,6 @@
 # Test_IFL_Simulation
 ## Set up and requirements
-This repo works with Ubuntu 20.04 and ROS Noetic.
+This repo works with Ubuntu 20.04 and ROS Noetic. Most of the files are connected and based on ***https://github.com/IFL-CAMP/iiwa_stack***.
 ### Load iiwa_stack
 #### Clone this repository to your workspace:
 ```
@@ -20,16 +20,14 @@ catkin build
 ```
 source devel/setup.bash
 ```
-#### Load the directory
-Load the directory ***iiwa_probe_utils***. The directory should be inside iiwa_stack/src.
+#### Load the directory:
+Load the directory ***iiwa_probe_utils***. The directory should be inside iiwa_stack/src. Load also the directory ***cloudpoint***.
 
-My Segmentation_decimated_better.stl file is loaded inside ~/Documents
+My Segmentation_decimated_better.stl file is loaded inside ~/Documents. This file is a mesh.
 
 ## Spawning of manipulator + bed + robot pedestal
-
 ```
 source ~/iiwa_stack_ws/devel/setup.bash
-
 roslaunch iiwa_probe_utils demo_with_tool_env_iiwa_stack.launch \
   model:=iiwa14 robot_name:=iiwa rviz:=true L_tip:=0.12 \
   table_yaw:=1.5708
@@ -44,7 +42,6 @@ Note: the pedestal and the table spawn below MoveIt!’s “virtual” floor lev
 Change the _mesh_path
 ```
 source ~/iiwa_stack_ws/devel/setup.bash
-
 ROS_NAMESPACE=iiwa rosrun iiwa_probe_utils attach_tool_mesh.py \
   _mesh_path:=/home/chiararipiemo/iiwa_stack_ws/src/iiwa_probe_utils/probe_urdf/IFL_FrankaHolder.dae \
   _link_name:=iiwa_link_ee \
