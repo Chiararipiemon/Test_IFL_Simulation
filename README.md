@@ -87,8 +87,15 @@ rosrun iiwa_probe_utils normals_markers_from_cloud.py \
 <img width="1849" height="1028" alt="immagine" src="https://github.com/user-attachments/assets/db837fcd-7828-4cbb-b427-32354cdedf74" />
 
 -----------------------------------------------------------------------------------------------------
-## Execute rastr scan
-```
-source ~/iiwa_stack_ws/devel/setup.bash
-ROS_NAMESPACE=iiwa rosrun iiwa_probe_utils go_to_preapproach_diagnose.py
-```
+## Execute raster scan
+Work in progress
+
+Voglio in qualche modo ottenere un codice che faccia queste cose:
+
+- legge la cloud (con normali) da /cloud_with_normals
+- fa n modo che il robot si posizioni in una posa di pre-appproach con probe orientato verso la nuvola di punti
+- prende P0 e Pdes (via parametri oppure cliccando due punti in RViz su /clicked_point),
+- campiona la retta in N punti, per ogni punto prende il nearest sulla cloud (e la sua normale),
+- costruisce le pose (pos = punto_surface − backoff·normale, orientamento: asse Z del tool allineato a −normale, asse X allineato alla direzione di scan proiettata sul piano tangente),
+- pianifica ed esegue un percorso cartesiano con MoveIt.
+
