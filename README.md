@@ -74,7 +74,7 @@ rosrun iiwa_probe_utils add_patient_cloud_on_table.py \
   _align_mesh_yaw_with_table:=false _table_yaw:=1.5708 \
   _z_lift:=0.12
 ```
-If the point cloud doesn’t appear, go to the MoveIt! GUI → Add → PointCloud2 and select the topic: /cloud_with_normals
+If the point cloud doesn’t appear, go to the MoveIt! GUI → Add → PointCloud2 and select the topic: /cloud_with_normals. Then File --> save config
 ### Overlay the normal arrows.
 ```
 source ~/iiwa_stack_ws/devel/setup.bash
