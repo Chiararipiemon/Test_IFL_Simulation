@@ -35,7 +35,7 @@ roslaunch iiwa_probe_utils demo_with_tool_env_iiwa_stack.launch \
 There's problably collision between base link and robot pedestal, to fix it.
 Note: the pedestal and the table spawn below MoveIt!’s “virtual” floor level. From code I managed to raise only the pedestal and the table, but the robot stays anchored to the floor because that’s how it was configured by the creators of iiwa_stack (which I’m using some files from), and I haven’t found a way to unpin it. This is definitely something to tackle in the future if I want to polish everything; for now I’m fine with it.
 
-<img width="351" height="307" alt="immagine" src="https://github.com/user-attachments/assets/9cede0b6-7f7d-42ce-8db9-07f3fb558de2" />
+<img width="453" height="360" alt="immagine" src="https://github.com/user-attachments/assets/1d08c3eb-37e9-4888-aecd-88282d81d0d4" />
 
 -----------------------------------------------------------------------------------------------------
 ## Attach the probe 
