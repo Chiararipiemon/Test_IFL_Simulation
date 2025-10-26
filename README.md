@@ -76,7 +76,7 @@ rosrun iiwa_probe_utils add_patient_cloud_on_table.py \
   _z_lift:=0.12
 ```
 If the point cloud doesn’t appear, go to the MoveIt! GUI → Add → PointCloud2 and select the topic: /cloud_with_normals. Then File --> save config
-### Overlay the normal arrows.
+### Overlay the normal arrows
 ```
 source ~/iiwa_stack_ws/devel/setup.bash
 rosrun iiwa_probe_utils normals_markers_from_cloud.py \
