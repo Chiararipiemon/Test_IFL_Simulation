@@ -100,3 +100,8 @@ Voglio in qualche modo ottenere un codice che faccia queste cose:
 - costruisce le pose (pos = punto_surface − backoff·normale, orientamento: asse Z del tool allineato a −normale, asse X allineato alla direzione di scan proiettata sul piano tangente),
 - pianifica ed esegue un percorso cartesiano con MoveIt.
 
+Problemi riscontrati fino ad ora:
+- fallisco ogni approccio perchè in qualche modo il robot va in collisione o fa dei movimenti strani tali per cui impazzisce e non riesce a raggiungere la posa desiderata.
+- ho provato a lanciare banalmente un codice in cui semplicemente a partire dalla home pose il robot deve ragggiungere una sola posa di pre approach, riesco ad ottenere la posa pianificata ma non viene eseguita (mistero). Il codice di questo tentativo lo rivedo e lo carico asap su questa repository.
+
+
