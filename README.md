@@ -21,9 +21,9 @@ catkin build
 source devel/setup.bash
 ```
 #### Load the directory:
-Load the directory ***iiwa_probe_utils***. The directory should be inside iiwa_stack/src. Load also the directory ***cloudpoint***.
+Load the directory ***iiwa_probe_utils***. The directory should be inside iiwa_stack/src. Load also the directory ***cloudpoint*** inside iiwa_probe_utils.
 
-My Segmentation_decimated_better.stl file is loaded inside ~/Documents. This file is a mesh.
+My **Segmentation_decimated_better.stl** file is loaded inside ~/Documents. This file is a mesh.
 
 ## Spawning of manipulator + bed + robot pedestal
 ```
