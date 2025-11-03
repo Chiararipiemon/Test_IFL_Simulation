@@ -13,5 +13,6 @@ Dal log si vede chiaramente che il robot riese a raggiungere la posa di pre-prea
 - Il punto p0 lo "indico" direttamente da codice una volta capito qual è un buon punto p0 che non fallice e non cliccandolo ogni volta? 
 
 **Secondo tentativo**
+Qui raggiungo in qualche modo p0 ma il probe holder penetra il cloudpoint del paziente e il robot esegue una traiettoria senza senso
 <img width="1845" height="1004" alt="immagine" src="https://github.com/user-attachments/assets/fa570022-bfde-4851-9b1b-eede0c33a017" />
 
