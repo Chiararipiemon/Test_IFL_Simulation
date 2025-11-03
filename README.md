@@ -108,7 +108,7 @@ Problemi riscontrati fino ad ora:
 Cosa sono riuscita ad ottenere almeno, aggiornamento **3 Novembre ore 17:36**:
 - robot che da home va in una posa di pre-approach
 - robot che va da home > pre.approach > si posizione normale al punto p0 ma non ha consapevolezza della geometria del probe holder e infatti il contatto avviene solo tra frame probe_tip e punto p0:
-  
+  Il file in questione si chiama pre_to_pose_and_touch_1728.py, non pre_to_pose_and_touch come indicato nel seguente script:
 ```
 ROS_NAMESPACE=iiwa \
 ~/iiwa_stack_ws/src/iiwa_probe_utils/scripts/3_nov/pre_to_pose_and_touch.py \
