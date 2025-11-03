@@ -107,5 +107,22 @@ Problemi riscontrati fino ad ora:
 
 Cosa sono riuscita ad ottenere almeno, aggiornamento **3 Novembre ore 17:36**:
 - robot che da home va in una posa di pre-approach
-- robot che va da home > pre.approach > si posizione normale al punto p0 ma non ha consapevolezza della geometria del probe holder e infatti il contatto avviene solo tra frame probe_tip e punto p0. 
+- robot che va da home > pre.approach > si posizione normale al punto p0 ma non ha consapevolezza della geometria del probe holder e infatti il contatto avviene solo tra frame probe_tip e punto p0:
+  
+```
+ROS_NAMESPACE=iiwa \
+~/iiwa_stack_ws/src/iiwa_probe_utils/scripts/3_nov/pre_to_pose_and_touch.py \
+  _group_name:=manipulator _ee_link:=iiwa_link_ee _ref_frame:=world \
+  _speed_scale:=0.2 \
+  _pre_joints:="[-2.529, 0.271, -0.268, 1.141, 2.932, 1.581, 0.174]" \
+  _target_joints:="[-0.176, 0.675, 0.008, -0.789, -0.004, 1.669, -0.169]" \
+  _cloud_topic:=/cloud_with_normals \
+  _tip_frame:=probe_tip \
+  _contact_margin:=0.006 \
+  _approach_dist:=0.05 _retreat_dist:=0.00 \
+  _far_steps:=1 _pre_steps:=12 _approach_steps:=18 \
+  _step_time:=0.25 _ik_timeout:=1.5 \
+  _allow_partial:=true _min_partial_fraction:=0.2 _pos_tol_final:=0.02 \
+  _ik_service:=/iiwa/compute_ik
+```
 
