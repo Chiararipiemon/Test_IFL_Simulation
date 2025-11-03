@@ -103,8 +103,9 @@ Voglio in qualche modo ottenere un codice che faccia queste cose:
 
 Problemi riscontrati fino ad ora:
 - fallisco ogni approccio perchè in qualche modo il robot va in collisione o fa dei movimenti strani tali per cui impazzisce e non riesce a raggiungere la posa desiderata.
-- ho provato a lanciare banalmente un codice in cui semplicemente a partire dalla home pose il robot deve ragggiungere una sola posa di pre approach, riesco ad ottenere la posa pianificata ma poi fallisco ogni tentativo di approccio al punto p0 --> approfondire su **issues.md** nella cartella ***3_nov***
+- ho provato a lanciare banalmente un codice in cui semplicemente a partire dalla home pose il robot deve ragggiungere una sola posa di pre approach, riesco ad ottenere la posa pianificata ma poi fallisco ogni tentativo di approccio al punto p0 --> approfondire su **issues.md** e **README.md** nella cartella ***3_nov***.
 
-Cosa sono riuscita ad ottenere alemeno:
-- robot che da home va  in una posa di pre-approach
+Cosa sono riuscita ad ottenere almeno, aggiornamento **3 Novembre ore 17:36**:
+- robot che da home va in una posa di pre-approach
+- robot che va da home > pre.approach > si posizione normale al punto p0 ma non ha consapevolezza della geometria del probe holder e infatti il contatto avviene solo tra frame probe_tip e punto p0. 
 
