@@ -103,7 +103,7 @@ Voglio in qualche modo ottenere un codice che faccia queste cose:
 
 Problemi riscontrati fino ad ora:
 - fallisco ogni approccio perchè in qualche modo il robot va in collisione o fa dei movimenti strani tali per cui impazzisce e non riesce a raggiungere la posa desiderata.
-- ho provato a lanciare banalmente un codice in cui semplicemente a partire dalla home pose il robot deve ragggiungere una sola posa di pre approach, riesco ad ottenere la posa pianificata ma poi fallisco ogni tentativo di approccio al punto p0 --> approfondire su **issues.md** e **README.md** nella cartella ***3_nov***.
+- ho provato a lanciare banalmente un codice in cui semplicemente a partire dalla home pose il robot deve ragggiungere una sola posa di pre approach, riesco ad ottenere la posa pianificata ma poi fallisco ogni tentativo di approccio CORRETTO al punto p0 --> approfondire su **issues.md** e **README.md** nella cartella ***3_nov***.
 
 Cosa sono riuscita ad ottenere almeno, aggiornamento **3 Novembre ore 17:36**, tutti i file py sono nella cartella 3_nov:
 - robot che da home va in una posa di pre-approach e poi si approccia al cloudpoint ma senza consapevolezza del cloudpoint, impongo solo i valori in radian che ciascun joint dele assumere:
