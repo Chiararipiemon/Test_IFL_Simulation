@@ -17,4 +17,9 @@ Qui raggiungo in qualche modo p0 ma il probe holder penetra il cloudpoint del pa
 <img width="1845" height="1004" alt="immagine" src="https://github.com/user-attachments/assets/fa570022-bfde-4851-9b1b-eede0c33a017" />
 <img width="689" height="577" alt="immagine" src="https://github.com/user-attachments/assets/2bf773ed-ba42-4f8e-91ef-ba3e32af60bb" />
 
+**Terzo tentativo**
+Il punto p0 non lo seleziono ramite gui ma lo indico da codice, sembrerebbe andare meglio ma non ci siamo ancora
+<img width="555" height="405" alt="immagine" src="https://github.com/user-attachments/assets/47e1cebd-cdbf-4457-980b-0b8fc00f6e83" />
+<img width="724" height="418" alt="immagine" src="https://github.com/user-attachments/assets/604333fb-5df8-436c-8fa8-86d6677a3ec8" />
+
 
