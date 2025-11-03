@@ -8,5 +8,13 @@ Non riesco a fare in modo che il planner sia consapevole della geometria del pro
 
 Altro tentativo precedente:
 <img width="1464" height="648" alt="immagine" src="https://github.com/user-attachments/assets/435541b8-50c4-4d9c-b3cc-f60aecfc5344" />
+```
+source ~/iiwa_stack_ws/devel/setup.bash
+ROS_NAMESPACE=iiwa \
+~/iiwa_stack_ws/src/iiwa_probe_utils/scripts/3_nov/move_pre_to_pose.py \
+  _group_name:=manipulator _ee_link:=iiwa_link_ee \
+  _speed_scale:=0.2 \
+  _fallback_steps:=50 _fallback_dt:=0.20
+```
 Per il momento il  codice che più si avvicina al funzionamento/movimento che voglio è quello sotto il nome di ***move_pre_to_pose.py***. Ma semplicemnete il robot si sposta da una posa di pre approach a una con probe orientato sulla nuvola di punt. Non è consapevole della nuvola di punti e delle normali
 Leggere file issues.md per capire tutti i tentativi fatti
