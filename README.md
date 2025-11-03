@@ -105,8 +105,16 @@ Problemi riscontrati fino ad ora:
 - fallisco ogni approccio perchè in qualche modo il robot va in collisione o fa dei movimenti strani tali per cui impazzisce e non riesce a raggiungere la posa desiderata.
 - ho provato a lanciare banalmente un codice in cui semplicemente a partire dalla home pose il robot deve ragggiungere una sola posa di pre approach, riesco ad ottenere la posa pianificata ma poi fallisco ogni tentativo di approccio al punto p0 --> approfondire su **issues.md** e **README.md** nella cartella ***3_nov***.
 
-Cosa sono riuscita ad ottenere almeno, aggiornamento **3 Novembre ore 17:36**:
-- robot che da home va in una posa di pre-approach
+Cosa sono riuscita ad ottenere almeno, aggiornamento **3 Novembre ore 17:36**, tutti i file py sono nella cartella 3_nov:
+- robot che da home va in una posa di pre-approach e poi si approccia al cloudpoint ma senza consapevolezza del cloudpoint, impongo solo i valori in radian che ciascun joint dele assumere:
+```
+source ~/iiwa_stack_ws/devel/setup.bash
+ROS_NAMESPACE=iiwa \
+~/iiwa_stack_ws/src/iiwa_probe_utils/scripts/3_nov/move_pre_to_pose.py \
+  _group_name:=manipulator _ee_link:=iiwa_link_ee \
+  _speed_scale:=0.2 \
+  _fallback_steps:=50 _fallback_dt:=0.20
+```
 - robot che va da home > pre.approach > si posizione normale al punto p0 ma non ha consapevolezza della geometria del probe holder e infatti il contatto avviene solo tra frame probe_tip e punto p0:
   Il file in questione si chiama pre_to_pose_and_touch_1728.py, non pre_to_pose_and_touch come indicato nel seguente script:
 ```
