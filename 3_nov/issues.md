@@ -9,3 +9,4 @@ Dal log si vede chiaramente che il robot riese a raggiungere la posa di pre-prea
 
 - Non seleziono il punto p0 correttamente?
 - Ci sono collisioni e quindi fallisco? in realtà ho provato anche a togliere le collisioni tra pedestal e link base0 e tra probe holder e link ee ma il problema rimane lo stesso
+- Il punto p0 lo "indico" direttamente da codice una volta capito qual è un buon punto p0 che non fallice e non cliccandolo ogni volta? 
