@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
+# Non ci siamo ancora, oltre al fatto che rileva pure collisioni dove non dovrebbe. In generale il planner funziona ma non è consapevole della geometria del probe holder.
 import sys
 import numpy as np
 
@@ -317,7 +317,7 @@ class PreToPoseAndTouch(object):
 
         return joints_seq, solved, False
 
-    # ---------- scelta P0 davanti alla punta ----------
+    # ---------- scelta P0  ----------
     def pick_P0_ahead_of_tip(self):
         for _ in range(200):
             if self.points is not None and len(self.points)>0: break
