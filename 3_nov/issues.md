@@ -15,4 +15,6 @@ Dal log si vede chiaramente che il robot riese a raggiungere la posa di pre-prea
 **Secondo tentativo**
 Qui raggiungo in qualche modo p0 ma il probe holder penetra il cloudpoint del paziente e il robot esegue una traiettoria senza senso
 <img width="1845" height="1004" alt="immagine" src="https://github.com/user-attachments/assets/fa570022-bfde-4851-9b1b-eede0c33a017" />
+<img width="689" height="577" alt="immagine" src="https://github.com/user-attachments/assets/2bf773ed-ba42-4f8e-91ef-ba3e32af60bb" />
+
 
