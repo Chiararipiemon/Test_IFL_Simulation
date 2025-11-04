@@ -158,3 +158,19 @@ python3 src/iiwa_probe_utils/scripts/4_nov/pre_to_pose_touch_and_sweep_new.py \
 ```
 Aggiornamento **4 Novembre 16:33**
 - visti i precedenti probemi riscontrati nel precedente aggiornamento, sto lavorando ad un codice che tenga sempre fisso l'orientamento del probe e non consideri più la nromale ad ogni punto
+```
+ROS_NAMESPACE=/iiwa \
+python3 src/iiwa_probe_utils/scripts/4_nov/pre_to_pose_touch_and_sweep_fixedZ.py \
+  _cloud_topic:=/cloud_with_normals \
+  _sweep_length:=0.20 \
+  _sweep_samples:=40 \
+  _sweep_pref_dir:='[0,1,0]' \
+  _use_fixed_z:=true \
+  _fixed_z_dir:='[0,0,-1]' \
+  _fixed_flip_to_face_target:=true \
+  _approach_dist:=0.03 \
+  _retreat_dist:=0.06 \
+  _ik_timeout:=3.0 \
+  _allow_partial:=true \
+  _min_partial_fraction:=0.10
+```
