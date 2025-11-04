@@ -139,6 +139,7 @@ Aggiornamento **4 Novembre ore 13:55**:
 - sto lavorando ad un codice che facccia scorrere il probe su una linea retta (sweep lineare) P0→Pdes, Z_tool = −normale in ogni campione, roll bloccato sulla direzione della linea, lift e rientro in pre_approach
 
 Aggiornamento **4 Novembre 15:44**:
+
 Approfondimenti nella cartella 4_nov
 ```
 cd /home/chiararipiemo/iiwa_stack_ws
@@ -155,3 +156,5 @@ python3 src/iiwa_probe_utils/scripts/4_nov/pre_to_pose_touch_and_sweep_new.py \
   _allow_partial:=true \
   _min_partial_fraction:=0.10
 ```
+Aggiornamento **4 Novembre 16:33**
+- visti i precedenti probemi riscontrati nel precedente aggiornamento, sto lavorando ad un codice che tenga sempre fisso l'orientamento del probe e non consideri più la nromale ad ogni punto
