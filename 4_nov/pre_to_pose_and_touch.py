@@ -44,11 +44,6 @@ Parameters (private namespace, with defaults shown)
 - ~tip_frame: frame of the physical tip (preferred over scalar offset)
 - ~tip_to_contact: fallback scalar offset from EE to tip along +Z_EE
 - ~flip_check: flip desired Z_tool when it would point away from P0
-
-Dependencies
-- ROS (rospy, tf2_ros, geometry_msgs, sensor_msgs)
-- MoveIt (moveit_commander, moveit_msgs)
-- NumPy, tf.transformations
 """
 
 import sys
