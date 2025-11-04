@@ -139,6 +139,7 @@ Aggiornamento **4 Novembre ore 13:55**:
 - sto lavorando ad un codice che facccia scorrere il probe su una linea retta (sweep lineare) P0→Pdes, Z_tool = −normale in ogni campione, roll bloccato sulla direzione della linea, lift e rientro in pre_approach
 
 Aggiornamento **4 Novembre 15:44**:
+Approfondimenti nella cartella 4_nov
 ```
 cd /home/chiararipiemo/iiwa_stack_ws
 source devel/setup.bash
