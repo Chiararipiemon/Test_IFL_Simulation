@@ -121,7 +121,7 @@ Aggiornamento ***4 Novembre ore 10:34**:
 - robot che va da home > pre.approach > si posiziona normale al punto p0: il contatto avviene tra frame probe_tip e punto p0.
 ```
 ROS_NAMESPACE=iiwa \
-~/iiwa_stack_ws/src/iiwa_probe_utils/scripts/3_nov/pre_to_pose_and_touch.py \
+~/iiwa_stack_ws/src/iiwa_probe_utils/scripts/4_nov/pre_to_pose_and_touch.py \
   _group_name:=manipulator _ee_link:=iiwa_link_ee _ref_frame:=world \
   _speed_scale:=0.2 \
   _pre_joints:="[-2.529, 0.271, -0.268, 1.141, 2.932, 1.581, 0.174]" \
