@@ -138,3 +138,19 @@ ROS_NAMESPACE=iiwa \
 Aggiornamento **4 Novembre ore 13:55**:
 - sto lavorando ad un codice che facccia scorrere il probe su una linea retta (sweep lineare) P0→Pdes, Z_tool = −normale in ogni campione, roll bloccato sulla direzione della linea, lift e rientro in pre_approach
 
+Aggiornamento **4 Novembre 15:44**:
+```
+cd /home/chiararipiemo/iiwa_stack_ws
+source devel/setup.bash
+ROS_NAMESPACE=/iiwa \
+python3 src/iiwa_probe_utils/scripts/4_nov/pre_to_pose_touch_and_sweep_new.py \
+  _cloud_topic:=/cloud_with_normals \
+  _sweep_length:=0.20 \
+  _sweep_samples:=40 \
+  _sweep_pref_dir:='[0,1,0]' \
+  _approach_dist:=0.03 \
+  _retreat_dist:=0.06 \
+  _ik_timeout:=3.0 \
+  _allow_partial:=true \
+  _min_partial_fraction:=0.10
+```
