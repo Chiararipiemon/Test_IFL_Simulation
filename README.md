@@ -135,4 +135,6 @@ ROS_NAMESPACE=iiwa \
   _allow_partial:=true _min_partial_fraction:=0.2 _pos_tol_final:=0.02 \
   _ik_service:=/iiwa/compute_ik
 ```
+Aggiornamento **4 Novembre ore 13:55**:
+- sto lavorando ad un codice che facccia scorrere il probe su una linea retta P0→Pdes, Z_tool = −normale in ogni campione, roll bloccato sulla direzione della linea, lift e rientro in pre_approach
 
