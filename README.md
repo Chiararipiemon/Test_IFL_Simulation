@@ -118,7 +118,7 @@ ROS_NAMESPACE=iiwa \
 ```
 
 Aggiornamento ***4 Novembre ore 10:34***: 
-- robot che va da home > pre.approach > si posiziona normale al punto p0: il contatto avviene tra frame probe_tip e punto p0.
+- robot che va da home > pre.approach > si posiziona normale al punto p0: il contatto avviene tra frame probe_tip e punto p0.Il frame probe_tip è circa coincidente con la punta finale del probe.
 ```
 ROS_NAMESPACE=iiwa \
 ~/iiwa_stack_ws/src/iiwa_probe_utils/scripts/4_nov/pre_to_pose_and_touch.py \
