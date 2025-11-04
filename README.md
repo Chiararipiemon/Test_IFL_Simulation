@@ -117,7 +117,7 @@ ROS_NAMESPACE=iiwa \
   _fallback_steps:=50 _fallback_dt:=0.20
 ```
 
-Aggiornamento ***4 Novembre ore 10:34**: 
+Aggiornamento ***4 Novembre ore 10:34***: 
 - robot che va da home > pre.approach > si posiziona normale al punto p0: il contatto avviene tra frame probe_tip e punto p0.
 ```
 ROS_NAMESPACE=iiwa \
