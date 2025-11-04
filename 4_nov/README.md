@@ -1,7 +1,10 @@
-Il codice ***pre_to_pose_touch_and_sweep_new.py*** al momento fa qualcosa che si avvicina molto a quello che voglio ottenere. Ci sono ancora alcuni moimenti che non mi piacciono (tipo per raggiungere p0 dal pre-approach e il fatto che una volta che sceglie p0 ci si allontana e poi si riapproccia al punto)
+Il codice ***pre_to_pose_touch_and_sweep_new.py*** al momento fa qualcosa che si avvicina molto a quello che voglio ottenere. Ci sono ancora alcuni moimenti che non mi piacciono (tipo per raggiungere p0 dal pre-approach e il fatto che una volta che sceglie p0 ci si allontana e poi si riapproccia al punto).
+
 Non mi sembra molto conforme alla realtà lo sweep che esegue ma in teoria segue il fatto che il probe sia sempre orienato normale a ciascun punto che tocca.
 Vorrei un comportamento pù smooth sulla pelle.
+
 I log sono:
+
 [INFO] [1762267611.064550045]: Ready to take commands for planning group manipulator.
 [INFO] [1762267611.092782]: tip_frame=probe_tip -> vettore EE->tip = [0.000, 0.000, 0.240] (frame iiwa_link_ee).
 [INFO] [1762267614.188038]: Raggiunto pre_approach via planner.
