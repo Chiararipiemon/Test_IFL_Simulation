@@ -78,6 +78,26 @@ rosrun iiwa_probe_utils normals_markers_from_cloud.py \
 <img width="1849" height="1028" alt="immagine" src="https://github.com/user-attachments/assets/db837fcd-7828-4cbb-b427-32354cdedf74" />
 
 -----------------------------------------------------------------------------------------------------
+## Record csv file [x,y,z,qx,qy,qz,qw]
+```
+source ~/iiwa_stack_ws/devel/setup.bash
+rosrun iiwa_probe_utils csv_logger.py \
+  _fixed_frame:=world \
+  _ee_frame:=iiwa_link_ee \
+  _units:=mm \
+  _rate_hz:=20 \
+  _output_dir:=/home/$USER/iiwa_csv \
+  _tip_offset_m:=0.0
+```
+### Start
+```
+rosservice call /csv_logger/start
+```
+### Stop 
+```
+rosservice call /csv_logger/stop
+```
+The exit file will be a .csv file inside /iiwa_csv
 ## Execute raster scan
 ### Only touch the p0 point
 - robot che va da home > pre.approach > si posiziona normale al punto p0: il contatto avviene tra frame probe_tip e punto p0.Il frame probe_tip è circa coincidente con la punta finale del probe.
