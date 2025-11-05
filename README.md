@@ -53,18 +53,6 @@ ROS_NAMESPACE=iiwa rosrun iiwa_probe_utils attach_tool_mesh.py \
   _scale_x:=1.0 _scale_y:=1.0 _scale_z:=1.0
 ```
 -----------------------------------------------------------------------------------------------------
-## Start loading file rosbag
-Work in progress, but for now is not the main problem
-```
-source ~/iiwa_stack_ws/devel/setup.bash
-rosbag record -O sweep_$(date +%F_%H%M%S).bag --lz4 \
-  /tf /tf_static \
-  /joint_states /iiwa/joint_states \
-  /planning_scene /iiwa/planning_scene \
-  /iiwa/move_group/display_planned_path \
-  /iiwa/move_group/monitored_planning_scene
-```
------------------------------------------------------------------------------------------------------
 ## Load skin cloudpoint 
 Change pdc_path with yours
 ```
@@ -91,32 +79,6 @@ rosrun iiwa_probe_utils normals_markers_from_cloud.py \
 
 -----------------------------------------------------------------------------------------------------
 ## Execute raster scan
-**Work in progress**
-
-Voglio in qualche modo ottenere un codice che faccia queste cose:
-
-- legge la cloud (con normali) da /cloud_with_normals
-- fa n modo che il robot si posizioni in una posa di pre-appproach con probe orientato verso la nuvola di punti
-- prende P0 e Pdes (via parametri oppure cliccando due punti in RViz su /clicked_point),
-- campiona la retta in N punti, per ogni punto prende il nearest sulla cloud (e la sua normale),
-- costruisce le pose (pos = punto_surface − backoff·normale, orientamento: asse Z del tool allineato a −normale, asse X allineato alla direzione di scan proiettata sul piano tangente),
-- pianifica ed esegue un percorso cartesiano con MoveIt.
-
-Problemi riscontrati fino ad ora:
-- fallisco ogni approccio perchè in qualche modo il robot va in collisione o fa dei movimenti strani tali per cui impazzisce e non riesce a raggiungere la posa desiderata.
-- ho provato a lanciare banalmente un codice in cui semplicemente a partire dalla home pose il robot deve ragggiungere una sola posa di pre approach, riesco ad ottenere la posa pianificata ma poi fallisco ogni tentativo di approccio CORRETTO al punto p0 --> approfondire su **issues.md** e **README.md** nella cartella ***3_nov***.
-
-Cosa sono riuscita ad ottenere almeno, aggiornamento **3 Novembre ore 17:36**, tutti i file py sono nella cartella 3_nov:
-- robot che da home va in una posa di pre-approach e poi si approccia al cloudpoint ma senza consapevolezza del cloudpoint, impongo solo i valori in radian che ciascun joint dele assumere:
-```
-source ~/iiwa_stack_ws/devel/setup.bash
-ROS_NAMESPACE=iiwa \
-~/iiwa_stack_ws/src/iiwa_probe_utils/scripts/3_nov/move_pre_to_pose.py \
-  _group_name:=manipulator _ee_link:=iiwa_link_ee \
-  _speed_scale:=0.2 \
-  _fallback_steps:=50 _fallback_dt:=0.20
-```
-
 Aggiornamento ***4 Novembre ore 10:34***: 
 - robot che va da home > pre.approach > si posiziona normale al punto p0: il contatto avviene tra frame probe_tip e punto p0.Il frame probe_tip è circa coincidente con la punta finale del probe.
 ```
