@@ -79,7 +79,7 @@ rosrun iiwa_probe_utils normals_markers_from_cloud.py \
 
 -----------------------------------------------------------------------------------------------------
 ## Execute raster scan
-Aggiornamento ***4 Novembre ore 10:34***: 
+### Only touch the p0 point
 - robot che va da home > pre.approach > si posiziona normale al punto p0: il contatto avviene tra frame probe_tip e punto p0.Il frame probe_tip è circa coincidente con la punta finale del probe.
 ```
 ROS_NAMESPACE=iiwa \
@@ -97,10 +97,8 @@ ROS_NAMESPACE=iiwa \
   _allow_partial:=true _min_partial_fraction:=0.2 _pos_tol_final:=0.02 \
   _ik_service:=/iiwa/compute_ik
 ```
-Aggiornamento **4 Novembre ore 13:55**:
-- sto lavorando ad un codice che facccia scorrere il probe su una linea retta (sweep lineare) P0→Pdes, Z_tool = −normale in ogni campione, roll bloccato sulla direzione della linea, lift e rientro in pre_approach
-
-Aggiornamento **4 Novembre 15:44**:
+### Execute normal based raster scan for each point of the cloudpoint --> linear sweep
+- Codice che fa scorrere il probe su una linea retta (sweep lineare) P0→Pdes, Z_tool = −normale in ogni campione, roll bloccato sulla direzione della linea, lift e rientro in pre_approach
 
 Approfondimenti nella cartella 4_nov
 ```
@@ -118,7 +116,7 @@ python3 src/iiwa_probe_utils/scripts/4_nov/pre_to_pose_touch_and_sweep_new.py \
   _allow_partial:=true \
   _min_partial_fraction:=0.10
 ```
-Aggiornamento **4 Novembre 16:33**
+### Execute no-normal based raster scan for each point of the cloudpoint (zfixed)--> linear sweep
 - visti i precedenti probemi riscontrati nel precedente aggiornamento, sto lavorando ad un codice che tenga sempre fisso l'orientamento del probe e non consideri più la nromale ad ogni punto
 ```
 ROS_NAMESPACE=/iiwa \
