@@ -83,7 +83,7 @@ rosrun iiwa_probe_utils normals_markers_from_cloud.py \
 source ~/iiwa_stack_ws/devel/setup.bash
 rosrun iiwa_probe_utils csv_logger.py \
   _fixed_frame:=world \
-  _ee_frame:=iiwa_link_ee \
+  _ee_frame:=probe_tip \
   _units:=mm \
   _rate_hz:=20 \
   _output_dir:=/home/$USER/iiwa_csv \
