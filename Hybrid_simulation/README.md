@@ -718,4 +718,14 @@ Una volta avuti come input le due spline e la segmentazione:
 è possibile avviare la **Hybrid Ultrasound Simulation**.
 
 # Method 2: from tracking sequence to ultrasound sweep
-Creare un ultrasound sweep a partire dalla tracking sequence: 
+Creare un ultrasound sweep a partire dalla tracking sequence.
+## Registrale e allisciare la tracking sequence:
+All'interno della console python di Imfusion
+```
+import sys, importlib; sys.path.append("/home/chiararipiemo/iiwa_stack_ws/src/iiwa_probe_utils/Hybrid_simulation/method_2"); import smooth_tracking_sequence as sts; importlib.reload(sts); sts.main()
+
+```
+## Generare un ultrasound sweep a partire dal tracking sequence:
+```
+import sys, importlib; sys.path.append("/home/chiararipiemo/iiwa_stack_ws/src/iiwa_probe_utils/Hybrid_simulation"); import sweep_ortho_from_tracking as so; importlib.reload(so); so.build_sweep_ortho()
+```
