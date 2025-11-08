@@ -1,4 +1,5 @@
 # Lanciare il file di Alejandro
+```
 exec("""
 import imfusion as imf
 import imfusion.ultrasound as us
@@ -104,5 +105,6 @@ else:
 
     imf.app.data_model.add(sweep)
 """, globals())
+```
 **Problemi**:
 AttributeError: module 'imfusion.ultrasound' has no attribute 'CoordinateSystem'
