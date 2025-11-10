@@ -9,6 +9,7 @@ La tracking sequence *us_poses_1762452771_imfusion_frame.csv* è stata precedent
 L'idea è quella di partire dalla tracking sequence ricavata dal file .csv, migliorre la traittoria "allisciandola" se troppo a zig zag e generare due spline:
 - Transducer spline
 - Direction spline
+  
 Queste due spline vengono generate come PolySpline, non adatte all'algritm di Hybrid Ultrasound simulation. Quindi serve modificare successivamente il workspace da:
 ```
 <property name="GlPolyLine">
