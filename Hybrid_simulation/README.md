@@ -1,11 +1,11 @@
 Questa cartella è dedicata al funzionamento corretto dell'*Hybrid Ultrasound Simulation* di **ImFusion** per generare le us sweep sintetiche da dare in pasto alla rete neurale per la sua segmentazione.
 
-Per ottenere i corretti dati di input che l'algoritmo richiede, ho lavorato e testato a due metodi. 
-Il primo metodo prevede di ottenere tramite codice le due spline GlSline che richiede come input l'algoritmo e settare successivamente tutti i parametri della simulazione ultrasound.
-Il secondo metodo prevede di generare direttamente l'Utrasound Sweep dalla tracking sequence per rispettare gli inut indicati dalla documentazione. 
+Per ottenere i corretti dati di input che l'algoritmo richiede, ho lavorato e testato due metodi. 
+Il primo metodo prevede di ottenere tramite codice le due spline GlSline che richiede come input l'algoritmo e settare successivamente tutti i parametri della simulazione ultrasound "manualmente" tramite GUI.
+Il secondo metodo prevede di generare direttamente l'*Utrasound Sweep* dalla tracking sequence per rispettare gli input indicati dalla documentazione (*https://docs.imfusion.com/suite/Ultrasound/Algorithms/US.UltrasoundSimulationHybrid.html*). 
 La tracking sequence *us_poses_1762452771_imfusion_frame.csv* è stata precedentemente registrata tramite il codice *convert_to_imfusion_frame.py* per allineare ambiente **moveit!** dal quale è stto ricavato il csv e ambiente **ImFusion*+.
 # Method 1: from tracking sequence to two spline
-L'idea è quella di partire dalla tracking sequence ricavata dal file .csv, migliorre la trittoria "allisciandola" se troppo a zig zag e generare due spline:
+L'idea è quella di partire dalla tracking sequence ricavata dal file .csv, migliorre la traittoria "allisciandola" se troppo a zig zag e generare due spline:
 - Transducer spline
 - Direction spline
 Queste due spline vengono generate come PolySpline, non adatte all'algritm di Hybrid Ultrasound simulation. Quindi serve modificare successivamente il workspace da:
