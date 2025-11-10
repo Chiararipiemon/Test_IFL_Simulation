@@ -726,11 +726,10 @@ Una volta avuti come input le due spline e la segmentazione:
 
 # Method 2: from tracking sequence to ultrasound sweep
 Creare un ultrasound sweep a partire dalla tracking sequence.
-## Registrale e allisciare la tracking sequence:
+## Allisciare la tracking sequence e rendere la traiettoria più smooth:
 All'interno della console python di Imfusion
 ```
-import sys, importlib; sys.path.append("/home/chiararipiemo/iiwa_stack_ws/src/iiwa_probe_utils/Hybrid_simulation/method_2"); import smooth_tracking_sequence as sts; importlib.reload(sts); sts.main()
-
+import io; exec(io.open("/home/chiararipiemo/iiwa_stack_ws/src/iiwa_probe_utils/Hybrid_simulation/method_2/smooth_tracking_sequence.py", mode="r", encoding="utf-8").read(), globals())
 ```
 ## Generare un ultrasound sweep a partire dal tracking sequence:
 questo codice è stato scritto in collborazione con un consulente di ImFusion stesso. Ho dovuto apportare delle modifiche alla sua base per adattarlo ale mie esigenze.
