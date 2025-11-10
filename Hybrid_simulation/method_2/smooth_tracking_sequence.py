@@ -5,7 +5,7 @@ import csv
 
 CSV_PATH = r"/home/chiararipiemo/iiwa_stack_ws/src/iiwa_probe_utils/Hybrid_simulation/us_poses_1762452771_imfusion_frame.csv"
 Y_OFFSET_MM = -94.0      # offset verso il basso
-SMOOTH_WINDOW = 15       # per migliorare la traiettoria
+SMOOTH_WINDOW = 15       # per migliorare la traiettoria e allisciarla come avvine nel metodo 1
 
 def quat_to_rot(qx, qy, qz, qw):
     q = np.array([qx, qy, qz, qw], dtype=float)
