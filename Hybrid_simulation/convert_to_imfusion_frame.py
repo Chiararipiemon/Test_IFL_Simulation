@@ -3,25 +3,23 @@
 import csv
 import os
 import numpy as np
-
+# codice per registrare tracking da ambiente Moveit! a ambiente Imfusion
 # ========= CONFIG =========
 
-# CSV originale (pose nel frame robot / mondo sorgente)
+# CSV originale 
 # Deve contenere per ogni riga: ... x, y, z, qx, qy, qz, qw
 CSV_IN  = "/home/chiararipiemo/iiwa_csv/us_poses_1762856006_no_vertical_tail.csv"
 
-# CSV di output compatibile ImFusion (frame ImFusion, con quaternioni)
+# CSV di output compatibile ImFusion 
 CSV_OUT = "/home/chiararipiemo/iiwa_stack_ws/src/iiwa_probe_utils/Hybrid_simulation/us_poses_1762856006_imfusion_frame.csv"
 
-# Unità del CSV originale:
-# - "m"  se le posizioni sono in metri
-# - "mm" se sono già in millimetri
+# Unità del CSV:
 INPUT_UNITS = "mm"
 
 # Trasformazione dal frame robot al frame ImFusion (in mm)
 T_IMFUSION_FROM_ROBOT = np.array([
     [1.0, 0.0, 0.0, -642.0],
-    [0.0, 0.0, 1.0, -364.0],  # per abbassare di altri 84 mm --> -364.0
+    [0.0, 0.0, 1.0, -364.0],  
     [0.0, -1.0, 0.0, -200.0],
     [0.0, 0.0, 0.0,    1.0]
 ], dtype=float)
