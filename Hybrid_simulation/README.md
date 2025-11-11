@@ -4,13 +4,18 @@ Per ottenere i corretti dati di input che l'algoritmo richiede, ho lavorato e te
 Il primo metodo prevede di ottenere tramite codice le due spline GlSline che richiede come input l'algoritmo e settare successivamente tutti i parametri della simulazione ultrasound "manualmente" tramite GUI.
 Il secondo metodo prevede di generare direttamente l'*Utrasound Sweep* dalla tracking sequence per rispettare gli input indicati dalla documentazione (*https://docs.imfusion.com/suite/Ultrasound/Algorithms/US.UltrasoundSimulationHybrid.html*). 
 # Registration Moveit! frames -> ImFusion frames
-La tracking sequence ottenuta da MOveit! è stata precedentemente registrata tramite il codice *convert_to_imfusion_frame.py* per allineare ambiente **moveit!** dal quale è stto ricavato il csv e ambiente **ImFusion**.
+La tracking sequence ottenuta da MOveit! è stata precedentemente registrata tramite il codice *convert_to_imfusion_frame.py* per allineare ambiente **moveit!** dal quale è stato ricavato il csv e ambiente **ImFusion**.
 # Method 1: from tracking sequence to two spline
-L'idea è quella di partire dalla tracking sequence ricavata dal file .csv, migliorre la traittoria "allisciandola" se troppo a zig zag e generare due spline:
+L'idea è quella di partire dalla tracking sequence ricavata dal file .csv, migliorare la traittoria "allisciandola" se troppo a zig zag e generare due spline:
 - Transducer spline
 - Direction spline
-  
-Queste due spline vengono generate come PolySpline, non adatte all'algritm di Hybrid Ultrasound simulation. Quindi serve modificare successivamente il workspace da:
+## Convert tracking sequence into two smoothed splines
+Dentro la console di Imfusion:
+```
+import runpy; runpy.run_path("/home/chiararipiemo/iiwa_stack_ws/src/iiwa_probe_utils/Hybrid_simulation/sweeps_for_hus.py", run_name="__main__")
+```
+## Change GlPolyLine into GlSpline
+Queste due spline vengono generate come PolySpline, non adatte all'algoritm di Hybrid Ultrasound simulation. Quindi serve modificare successivamente il workspace da:
 ```
 <property name="GlPolyLine">
 	<param name="editable">1</param>
@@ -721,7 +726,10 @@ Ecco un esempio di workspace corretto:
 	</property>
 </propertyfile>
 ```
-Esempio diretto è il workspace caricato **method_1.iws**
+## Move manually the splines from Global annotations to segm_relabel
+<img width="412" height="173" alt="immagine" src="https://github.com/user-attachments/assets/43bd2234-96d1-44a4-bf88-6981582aa329" />
+
+Esempio diretto è il workspace caricato **method_1_new.iws**
 Una volta avuti come input le due spline e la segmentazione:
 <img width="1845" height="859" alt="immagine" src="https://github.com/user-attachments/assets/995b54dd-f164-49a8-8aa4-6ade12dc2bfe" />
 è possibile avviare la **Hybrid Ultrasound Simulation**.
