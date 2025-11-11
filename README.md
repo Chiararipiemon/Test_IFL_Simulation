@@ -90,10 +90,12 @@ rosrun iiwa_probe_utils csv_logger.py \
   _tip_offset_m:=0.0
 ```
 ### Start
+Quando il probe_tip "tocca" p0 lanciare:
 ```
 rosservice call /csv_logger/start
 ```
 ### Stop 
+Quando lo sweep lineare è stato eseguito, lanciare:
 ```
 rosservice call /csv_logger/stop
 ```
