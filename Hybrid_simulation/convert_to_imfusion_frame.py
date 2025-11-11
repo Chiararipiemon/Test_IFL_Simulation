@@ -4,18 +4,23 @@ import csv
 import os
 import numpy as np
 
-# Load original CSV imported from Moveit! output 
-CSV_IN  = "/home/chiararipiemo/iiwa_csv/us_poses_1762452771.csv"
+# ========= CONFIG =========
 
-# CSV output 
-CSV_OUT = "/home/chiararipiemo/iiwa_stack_ws/src/iiwa_probe_utils/Hybrid_simulation/us_poses_1762452771_imfusion_frame_quat.csv"
+# CSV originale (pose nel frame robot / mondo sorgente)
+# Deve contenere per ogni riga: ... x, y, z, qx, qy, qz, qw
+CSV_IN  = "/home/chiararipiemo/iiwa_csv/us_poses_1762856006_no_vertical_tail.csv"
+
+# CSV di output compatibile ImFusion (frame ImFusion, con quaternioni)
+CSV_OUT = "/home/chiararipiemo/iiwa_stack_ws/src/iiwa_probe_utils/Hybrid_simulation/us_poses_1762856006_imfusion_frame.csv"
 
 # Unità del CSV originale:
+# - "m"  se le posizioni sono in metri
+# - "mm" se sono già in millimetri
 INPUT_UNITS = "mm"
 
 # Trasformazione dal frame robot al frame ImFusion (in mm)
 T_IMFUSION_FROM_ROBOT = np.array([
-    [1.0, 0.0, 0.0, -650.0],
+    [1.0, 0.0, 0.0, -642.0],
     [0.0, 0.0, 1.0, -364.0],  # per abbassare di altri 84 mm --> -364.0
     [0.0, -1.0, 0.0, -200.0],
     [0.0, 0.0, 0.0,    1.0]
