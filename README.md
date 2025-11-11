@@ -32,16 +32,16 @@ roslaunch iiwa_probe_utils demo_with_tool_env_iiwa_stack.launch \
   model:=iiwa14 robot_name:=iiwa rviz:=true L_tip:=0.24 \
   table_yaw:=1.5708
 ```
-La lunghezza L_Tip è settata a 0.24 per simulare una sorta di pressione del probe sulla pelle del paziente.
-There's problably collision between base link and robot pedestal, to fix it.
+The length L_Tip is set to 0.24 to simulate the probe exerting slight pressure on the patient’s skin
+There's collision between base link and robot pedestal but is not a roblem for the path planning for now.
 
-Note: the pedestal and the table spawn below MoveIt!’s “virtual” floor level. From code I managed to raise only the pedestal and the table, but the robot stays anchored to the floor because that’s how it was configured by the creators of iiwa_stack (which I’m using some files from), and I haven’t found a way to unpin it. This is definitely something to tackle in the future if I want to polish everything; for now I’m fine with it.
+Note: the pedestal and the table spawn below MoveIt!’s “virtual” floor level. From code I managed to raise only the pedestal and the table, but the robot stays anchored to the floor because that’s how it was configured by the creators of iiwa_stack (which I’m using some files from) and I haven’t found a way to unpin it. This is definitely something to tackle in the future if I want to polish everything; for now I’m fine with it.
 
 <img width="453" height="360" alt="immagine" src="https://github.com/user-attachments/assets/1d08c3eb-37e9-4888-aecd-88282d81d0d4" />
 
 -----------------------------------------------------------------------------------------------------
 ## Attach the probe 
-Change the _mesh_path
+Change the *_mesh_path* wth yours.
 ```
 source ~/iiwa_stack_ws/devel/setup.bash
 ROS_NAMESPACE=iiwa rosrun iiwa_probe_utils attach_tool_mesh.py \
