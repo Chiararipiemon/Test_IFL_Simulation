@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<propertyfile version="1.1" name="" comment="Written by ImFusionLib, 2025-11-11 12:01:55">
+	<param name="workspaceVersion">29</param>
+	<property name="Datasets">
+		<property name="Data">
+			<param name="uid">data8</param>
+			<param name="name">Segmentation_decimated_better_points_mm</param>
+		</property>
+		<property name="Data">
+			<param name="topDown">1</param>
+			<param name="filename">../src/iiwa_probe_utils/Hybrid_simulation/segm_relabel.nii.gz</param>
+			<param name="name">segm_relabel</param>
+			<param name="original">1</param>
+			<param name="uid">data9</param>
+			<param name="transformation">-1 -1.22464679914735e-16 0 2.03074645996097 1.22464679914735e-16 -1 0 -126.663219928741 0 0 1 186.377990722656 0 0 0 1 </param>
+			<property name="Components">
+				<property name="DisplayOptions2d">
+					<param name="windowingInitialized">1</param>
+					<property name="TransferFunction">
+						<param name="window">12</param>
+						<param name="level">7</param>
+						<param name="mode">0</param>
+					</property>
+				</property>
+				<property name="DisplayOptions3d">
+					<property name="TransferFunction">
+						<param name="window">2774</param>
+						<param name="level">363</param>
+						<param name="presetName">CT Bone</param>
+						<param name="mode">0</param>
+						<property name="Tissues">
+							<property name="Tissue">
+								<property name="KeyPoint">
+									<param name="position">0.4</param>
+									<param name="color">0.752941176470588 0.250980392156863 0.125490196078431 0 </param>
+								</property>
+								<property name="KeyPoint">
+									<param name="position">0.475</param>
+									<param name="color">0.975 0.9 0.82 0.5 </param>
+								</property>
+								<property name="KeyPoint">
+									<param name="position">0.5</param>
+									<param name="color">1 1 1 0.6 </param>
+								</property>
+								<property name="KeyPoint">
+									<param name="position">1</param>
+									<param name="color">0.9 0.9 0.9 0.6 </param>
+								</property>
+							</property>
+						</property>
+					</property>
+				</property>
+				<property name="LabelDataComponent">
+					<property name="LabelConfig">
+						<param name="pixelValue">0</param>
+						<param name="snomedCategoryCodeValue"/>
+						<param name="snomedCategoryCodeMeaning"/>
+						<param name="snomedTypeCodeValue"/>
+						<param name="snomedTypeCodeMeaning"/>
+					</property>
+					<property name="LabelConfig">
+						<param name="pixelValue">2</param>
+						<param name="snomedCategoryCodeValue"/>
+						<param name="snomedCategoryCodeMeaning"/>
+						<param name="snomedTypeCodeValue"/>
+						<param name="snomedTypeCodeMeaning"/>
+					</property>
+					<property name="LabelConfig">
+						<param name="pixelValue">5</param>
+						<param name="snomedCategoryCodeValue"/>
+						<param name="snomedCategoryCodeMeaning"/>
+						<param name="snomedTypeCodeValue"/>
+						<param name="snomedTypeCodeMeaning"/>
+					</property>
+					<property name="LabelConfig">
+						<param name="pixelValue">7</param>
+						<param name="snomedCategoryCodeValue"/>
+						<param name="snomedCategoryCodeMeaning"/>
+						<param name="snomedTypeCodeValue"/>
+						<param name="snomedTypeCodeMeaning"/>
+					</property>
+					<property name="LabelConfig">
+						<param name="pixelValue">11</param>
+						<param name="snomedCategoryCodeValue"/>
+						<param name="snomedCategoryCodeMeaning"/>
+						<param name="snomedTypeCodeValue"/>
+						<param name="snomedTypeCodeMeaning"/>
+					</property>
+					<property name="LabelConfig">
+						<param name="pixelValue">12</param>
+						<param name="snomedCategoryCodeValue"/>
+						<param name="snomedCategoryCodeMeaning"/>
+						<param name="snomedTypeCodeValue"/>
+						<param name="snomedTypeCodeMeaning"/>
+					</property>
+				</property>
+			</property>
+		</property>
+		<property name="Data">
+			<param name="uid">data13</param>
+			<param name="name">Tracking Sequence</param>
+		</property>
+	</property>
+	<property name="Interface">
+		<param name="outputUids">"data8" "data9" "data13" </param>
+		<param name="inputUids"/>
+	</property>
+	<property name="Algorithms">
+		<property name="IO.TrackingSequenceIO">
+			<param name="location">../../iiwa_csv/us_poses_1762855758.csv</param>
+			<param name="poseColumns">x,y,z,qw,qx,qy,qz</param>
+			<param name="showDialog">0</param>
+			<param name="execute">1</param>
+			<param name="inputUids"/>
+			<param name="outputUids">"data0" </param>
+			<property name="CSVTrackingStream">
+				<param name="containsHeaders">1</param>
+				<param name="delimiters">,</param>
+			</property>
+		</property>
+		<property name="IO.TrackingSequenceIO">
+			<param name="location">../../iiwa_csv/us_poses_1762452771.csv</param>
+			<param name="poseColumns">x,y,z,qw,qx,qy,qz</param>
+			<param name="showDialog">0</param>
+			<param name="execute">1</param>
+			<param name="inputUids"/>
+			<param name="outputUids">"data1" </param>
+			<property name="CSVTrackingStream">
+				<param name="containsHeaders">1</param>
+				<param name="delimiters">,</param>
+			</property>
+		</property>
+		<property name="Delete Data">
+			<param name="execute">1</param>
+			<param name="inputUids">"data0" </param>
+			<param name="outputUids"/>
+		</property>
+		<property name="Delete Data">
+			<param name="execute">1</param>
+			<param name="inputUids">"data1" </param>
+			<param name="outputUids"/>
+		</property>
+		<property name="IO.TrackingSequenceIO">
+			<param name="location">../../iiwa_csv/us_poses_1762856006.csv</param>
+			<param name="poseColumns">x,y,z,qw,qx,qy,qz</param>
+			<param name="showDialog">0</param>
+			<param name="execute">1</param>
+			<param name="inputUids"/>
+			<param name="outputUids">"data2" </param>
+			<property name="CSVTrackingStream">
+				<param name="containsHeaders">1</param>
+				<param name="delimiters">,</param>
+			</property>
+		</property>
+		<property name="IO.TrackingSequenceIO">
+			<param name="location">../../iiwa_csv/us_poses_1762452771.csv</param>
+			<param name="poseColumns">x,y,z,qw,qx,qy,qz</param>
+			<param name="showDialog">0</param>
+			<param name="execute">1</param>
+			<param name="inputUids"/>
+			<param name="outputUids">"data3" </param>
+			<property name="CSVTrackingStream">
+				<param name="containsHeaders">1</param>
+				<param name="delimiters">,</param>
+			</property>
+		</property>
+		<property name="IO.TrackingSequenceIO">
+			<param name="location">../../iiwa_csv/us_poses_1762855758.csv</param>
+			<param name="poseColumns">x,y,z,qw,qx,qy,qz</param>
+			<param name="showDialog">0</param>
+			<param name="execute">1</param>
+			<param name="inputUids"/>
+			<param name="outputUids">"data4" </param>
+			<property name="CSVTrackingStream">
+				<param name="containsHeaders">1</param>
+				<param name="delimiters">,</param>
+			</property>
+		</property>
+		<property name="IO.TrackingSequenceIO">
+			<param name="location">../../Scaricati/us_poses_1762856006_cleaned.csv</param>
+			<param name="poseColumns">x,y,z,qw,qx,qy,qz</param>
+			<param name="showDialog">0</param>
+			<param name="execute">1</param>
+			<param name="inputUids"/>
+			<param name="outputUids">"data5" </param>
+			<property name="CSVTrackingStream">
+				<param name="containsHeaders">1</param>
+				<param name="delimiters">,</param>
+			</property>
+		</property>
+		<property name="IO.TrackingSequenceIO">
+			<param name="location">../../Scaricati/us_poses_1762856006_sweep_only.csv</param>
+			<param name="poseColumns">x,y,z,qw,qx,qy,qz</param>
+			<param name="showDialog">0</param>
+			<param name="execute">1</param>
+			<param name="inputUids"/>
+			<param name="outputUids">"data6" </param>
+			<property name="CSVTrackingStream">
+				<param name="containsHeaders">1</param>
+				<param name="delimiters">,</param>
+			</property>
+		</property>
+		<property name="IO.TrackingSequenceIO">
+			<param name="location">../../Scaricati/us_poses_1762856006_no_vertical_tail.csv</param>
+			<param name="poseColumns">x,y,z,qw,qx,qy,qz</param>
+			<param name="showDialog">0</param>
+			<param name="execute">1</param>
+			<param name="inputUids"/>
+			<param name="outputUids">"data7" </param>
+			<property name="CSVTrackingStream">
+				<param name="containsHeaders">1</param>
+				<param name="delimiters">,</param>
+			</property>
+		</property>
+		<property name="Delete Data">
+			<param name="execute">1</param>
+			<param name="inputUids">"data3" "data4" "data5" "data6" </param>
+			<param name="outputUids"/>
+		</property>
+		<property name="Delete Data">
+			<param name="execute">1</param>
+			<param name="inputUids">"data2" </param>
+			<param name="outputUids"/>
+		</property>
+		<property name="IO.PointCloudIo">
+			<param name="location">../src/iiwa_probe_utils/Hybrid_simulation/Segmentation_decimated_better_points_mm.pcd</param>
+			<param name="saveBinary">0</param>
+			<param name="saveColors">0</param>
+			<param name="saveLabels">0</param>
+			<param name="execute">1</param>
+			<param name="inputUids"/>
+			<param name="outputUids">"data8" </param>
+		</property>
+		<property name="IO.NiftiIo">
+			<param name="location">../src/iiwa_probe_utils/Hybrid_simulation/segm_relabel.nii.gz</param>
+			<param name="execute">1</param>
+			<param name="inputUids"/>
+			<param name="outputUids">"data9" </param>
+		</property>
+		<property name="Base.SetModality">
+			<param name="modality">8</param>
+			<param name="resetDisplayOptions">0</param>
+			<param name="execute">1</param>
+			<param name="inputUids">"data9" </param>
+			<param name="outputUids"/>
+		</property>
+		<property name="IO.TrackingSequenceIO">
+			<param name="location">../src/iiwa_probe_utils/Hybrid_simulation/us_poses_1762856006_imfusion_frame.csv</param>
+			<param name="poseColumns">x_mm,y_mm,z_mm,qw,qx,qy,qz</param>
+			<param name="showDialog">0</param>
+			<param name="execute">1</param>
+			<param name="inputUids"/>
+			<param name="outputUids">"data10" </param>
+			<property name="CSVTrackingStream">
+				<param name="containsHeaders">1</param>
+				<param name="delimiters">,</param>
+			</property>
+		</property>
+		<property name="IO.TrackingSequenceIO">
+			<param name="location">../src/iiwa_probe_utils/Hybrid_simulation/us_poses_1762856006_imfusion_frame.csv</param>
+			<param name="poseColumns">x_mm,y_mm,z_mm,qw,qx,qy,qz</param>
+			<param name="showDialog">0</param>
+			<param name="execute">1</param>
+			<param name="inputUids"/>
+			<param name="outputUids">"data11" </param>
+			<property name="CSVTrackingStream">
+				<param name="containsHeaders">1</param>
+				<param name="delimiters">,</param>
+			</property>
+		</property>
+		<property name="IO.TrackingSequenceIO">
+			<param name="location">../src/iiwa_probe_utils/Hybrid_simulation/us_poses_1762856006_imfusion_frame.csv</param>
+			<param name="poseColumns">x_mm,y_mm,z_mm,qw,qx,qy,qz</param>
+			<param name="showDialog">0</param>
+			<param name="execute">1</param>
+			<param name="inputUids"/>
+			<param name="outputUids">"data12" </param>
+			<property name="CSVTrackingStream">
+				<param name="containsHeaders">1</param>
+				<param name="delimiters">,</param>
+			</property>
+		</property>
+		<property name="Delete Data">
+			<param name="execute">1</param>
+			<param name="inputUids">"data10" </param>
+			<param name="outputUids"/>
+		</property>
+		<property name="Delete Data">
+			<param name="execute">1</param>
+			<param name="inputUids">"data11" </param>
+			<param name="outputUids"/>
+		</property>
+		<property name="Delete Data">
+			<param name="execute">1</param>
+			<param name="inputUids">"data7" </param>
+			<param name="outputUids"/>
+		</property>
+		<property name="IO.TrackingSequenceIO">
+			<param name="location">../src/iiwa_probe_utils/Hybrid_simulation/us_poses_1762856006_imfusion_frame.csv</param>
+			<param name="poseColumns">x_mm,y_mm,z_mm,qw,qx,qy,qz</param>
+			<param name="showDialog">0</param>
+			<param name="execute">1</param>
+			<param name="inputUids"/>
+			<param name="outputUids">"data13" </param>
+			<property name="CSVTrackingStream">
+				<param name="containsHeaders">1</param>
+				<param name="delimiters">,</param>
+			</property>
+		</property>
+		<property name="Delete Data">
+			<param name="execute">1</param>
+			<param name="inputUids">"data12" </param>
+			<param name="outputUids"/>
+		</property>
+	</property>
+	<property name="Annotations">
+		<property name="GlPointCloud">
+			<param name="editable">1</param>
+			<param name="color">1 1 0 1 </param>
+			<param name="lineWidth">1</param>
+			<param name="labelVisible">1</param>
+			<param name="labelBackgroundVisible">0</param>
+			<param name="labelBackgroundColor">0.3 0.3 0.3 0.7 </param>
+			<param name="labelBackgroundMargin">3</param>
+			<param name="labelDepthTest">1</param>
+			<param name="labelColor">0 1 1 </param>
+			<param name="labelText"/>
+			<param name="name">Segmentation_decimated_better_points_mm</param>
+			<param name="pointSize">2</param>
+			<param name="drawLines">0</param>
+			<param name="drawNormals">0</param>
+			<param name="colorWithNormals">0</param>
+			<param name="poseLinked">0</param>
+			<param name="referenceDataUid">data8</param>
+		</property>
+		<property name="GlSpline">
+			<param name="editable">1</param>
+			<param name="color">1 1 0 1 </param>
+			<param name="lineWidth">1</param>
+			<param name="labelVisible">1</param>
+			<param name="labelBackgroundVisible">0</param>
+			<param name="labelBackgroundColor">0.3 0.3 0.3 0.7 </param>
+			<param name="labelBackgroundMargin">3</param>
+			<param name="labelDepthTest">1</param>
+			<param name="labelColor">0 1 1 </param>
+			<param name="labelText">181.8 mm</param>
+			<param name="name">Transducer Spline</param>
+			<param name="points">4.84797343750002 -16.2769299375 -89.367106875 
+ 4.77526722427226 -16.7322501571846 -91.1415530855721 
+ 4.56194390823261 -17.1547517649157 -92.9162697953989 
+ 4.28905566597137 -17.5144132211865 -94.6970888725922 
+ 4.13919137956635 -17.9405848259301 -96.4776837161708 
+ 4.09783697227853 -18.4249567557286 -98.2493763712809 
+ 4.1052189669792 -18.9374888153748 -100.013569284138 
+ 4.15855495514785 -19.451397008406 -101.776277840801 
+ 4.24904587136847 -19.9258935356063 -103.548842951568 
+ 4.31360205990113 -20.4005165708866 -105.322324870019 
+ 4.27414074443584 -20.8439885267951 -107.103869666818 
+ 4.35061929200197 -21.2857234248075 -108.884467139282 
+ 4.3657983137144 -21.6944078855279 -110.674523804621 
+ 4.53849851213901 -22.125581315574 -112.451794096696 
+ 4.69316682715005 -22.5888921182038 -114.221600906124 
+ 4.79429061752641 -23.0758375720016 -115.989898114494 
+ 4.82752239530847 -23.5830859802914 -117.754256700904 
+ 4.7883197117241 -24.1001835238343 -119.516698163338 
+ 4.69689969548462 -24.6020851153425 -121.281599931321 
+ 4.55402167694679 -25.1105241491232 -123.041176241771 
+ 4.38977819141965 -25.5946488378874 -124.805681697171 
+ 4.2612624311607 -26.0533074698895 -126.580053852196 
+ 4.16836025934492 -26.4863084019774 -128.362882233175 
+ 4.09912888082457 -26.8987775932116 -130.151859012588 
+ 4.06159160387743 -27.327512119499 -131.937891883867 
+ 3.99256589143827 -27.7170795704595 -133.731974562141 
+ 3.94866105341696 -28.1148991883932 -135.524894272422 
+ 3.85901151803833 -28.4715859234941 -137.3247563686 
+ 3.75571068130109 -28.8105195774859 -139.127384582329 
+ 3.65027043226217 -29.1363383299934 -140.932198113913 
+ 3.54948185368284 -29.4524474596428 -142.739117866024 
+ 3.44286850609976 -29.7547642517054 -144.548105482012 
+ 3.31675657868549 -30.0356145573553 -146.359337749301 
+ 3.16131902119488 -30.2886995887475 -148.172381084717 
+ 3.0020922673923 -30.5277274316557 -149.986960435605 
+ 2.87794162082443 -30.7698094992311 -151.803888927688 
+ 2.78461914161425 -31.0169216752028 -153.621928791739 
+ 2.71966651648847 -31.2678303108022 -155.440763830596 
+ 2.56786292351075 -31.5102713824856 -157.253759062791 
+ 2.32564793652452 -31.7321037657846 -159.061289215187 
+ 1.97297476431886 -31.9304122144943 -160.851592312073 
+ 1.54291514751261 -32.1079262375382 -162.628877689484 
+ 1.15810417757656 -32.2735485704949 -164.417124909888 
+ 0.849921044291409 -32.4377561522536 -166.220575597592 
+ 0.622506164397309 -32.596245082186 -168.03606720098 
+ 0.465536602793189 -32.7515714695003 -169.859811300213 
+ 0.346048948498505 -32.9109019636106 -171.686123392681 
+ 0.265157330274296 -33.0737395916874 -173.514168593157 
+ 0.222589678386885 -33.2390419501045 -175.343379906768 
+ 0.212156996301808 -33.4077137571932 -177.172777744772 
+ 0.235728889909637 -33.5779591576797 -179.001945240534 
+ 0.260636555591174 -33.7399145156289 -180.831844937843 
+ 0.256406148959304 -33.8489550922304 -182.665471275958 
+ 0.241350897166182 -33.9319222505914 -184.500743971498 
+ 0.215800694340249 -33.9869987994729 -186.336642248116 
+ 0.166082446325956 -33.9954132612038 -188.173173123611 
+ 0.145794489666571 -34.0070470684919 -190.010248492628 
+ 0.179908606940386 -34.0142360070471 -191.846940500071 
+ 0.24846829695612 -34.0218240970465 -193.682765426023 
+ 0.357176841396691 -34.0295163880389 -195.516517311523 
+ 0.50284451945111 -34.0330694215708 -197.347935124707 
+ 0.631283313352951 -34.0212541471248 -199.180626242603 
+ 0.734792646186686 -33.9829200624864 -201.014498540608 
+ 0.821953077269277 -33.929289660223 -202.848822039466 
+ 0.890227208380225 -33.856216719978 -204.683225652338 
+ 0.948992502688781 -33.7684989069906 -206.517399310607 
+ 1.02256227946083 -33.6812416514575 -208.35104870599 
+ 1.15713302583994 -33.6055491749401 -210.181773759438 
+ 1.30846883449616 -33.5303581129806 -212.011191784159 
+ 1.50284179355937 -33.464435045216 -213.836661509863 
+ 1.72594152273593 -33.3868005642194 -215.658525762638 
+ 1.93442473421174 -33.288788387051 -217.481010371453 
+ 2.10786253056165 -33.1797538971576 -219.306665233502 
+ 2.27405788247361 -33.0386338928422 -221.130688185931 
+ 2.40333228988395 -32.8995185471723 -222.95794861398 
+ 2.56396571308552 -32.7430433212697 -224.781073728439 
+ 2.70593362389145 -32.526045837384 -226.599795272139 
+ 2.88303053782594 -32.2934211850912 -228.413332670816 
+ 3.0259770559294 -31.9963668366565 -230.220657174016 
+ 3.15517330401385 -31.6638637217519 -232.022751640294 
+ 3.33026229876187 -31.3581044528774 -233.825774068701 
+ 3.49909213594502 -31.0183747087799 -235.623156047178 
+ 3.70473176040316 -30.6986294078248 -237.420386410734 
+ 3.89111082341808 -30.3113163168605 -239.206355023616 
+ 4.06683100205902 -29.8519783685547 -240.976050882457 
+ 4.22856028739356 -29.324282333176 -242.728266770355 
+ 4.45624726578233 -28.7858889481167 -244.469608657252 
+ 4.67510180195296 -28.2886616625122 -246.224213189104 
+ 4.95266197092431 -27.8302285175105 -247.98117035821 
+ 5.11927959447604 -27.3666630430989 -249.750490928167 
+ 5.20285067372162 -26.8736115943767 -251.517095236503 
+ 5.23545762686472 -26.3620743971284 -253.281166536697 
+ 5.32054010020895 -25.8720530280068 -255.049549387019 
+ 5.41696001126154 -25.3949043054882 -256.819742746349 
+ 5.34964152477913 -24.8798337572174 -258.580452171991 
+ 5.21072958205197 -24.3246015329686 -260.325193787545 
+ 5.21938210187668 -23.7258990420221 -262.060471242697 
+ 5.37084740380656 -23.1940821696744 -263.810440663794 
+ 5.61828831508069 -22.8557573625366 -265.594521437931 
+ 5.27622693749996 -22.5526265 -267.303465 
+ </param>
+			<param name="pointColor">1 1 0 1 </param>
+			<param name="isClosed">0</param>
+			<param name="renderMode3d">0</param>
+			<param name="parentDataUid">data9</param>
+			<param name="poseLinked">0</param>
+		</property>
+		<property name="GlSpline">
+			<param name="editable">1</param>
+			<param name="color">1 1 0 1 </param>
+			<param name="lineWidth">1</param>
+			<param name="labelVisible">1</param>
+			<param name="labelBackgroundVisible">0</param>
+			<param name="labelBackgroundColor">0.3 0.3 0.3 0.7 </param>
+			<param name="labelBackgroundMargin">3</param>
+			<param name="labelDepthTest">1</param>
+			<param name="labelColor">0 1 1 </param>
+			<param name="labelText">181.8 mm</param>
+			<param name="name">Direction Spline</param>
+			<param name="points">4.84797343750002 -86.2769299375 -89.367106875 
+ 4.77526722427226 -86.7322501571846 -91.1415530855721 
+ 4.56194390823261 -87.1547517649157 -92.9162697953989 
+ 4.28905566597137 -87.5144132211865 -94.6970888725922 
+ 4.13919137956635 -87.9405848259301 -96.4776837161708 
+ 4.09783697227853 -88.4249567557286 -98.2493763712809 
+ 4.1052189669792 -88.9374888153748 -100.013569284138 
+ 4.15855495514785 -89.451397008406 -101.776277840801 
+ 4.24904587136847 -89.9258935356063 -103.548842951568 
+ 4.31360205990113 -90.4005165708866 -105.322324870019 
+ 4.27414074443584 -90.8439885267951 -107.103869666818 
+ 4.35061929200197 -91.2857234248075 -108.884467139282 
+ 4.3657983137144 -91.6944078855279 -110.674523804621 
+ 4.53849851213901 -92.125581315574 -112.451794096696 
+ 4.69316682715005 -92.5888921182038 -114.221600906124 
+ 4.79429061752641 -93.0758375720016 -115.989898114494 
+ 4.82752239530847 -93.5830859802914 -117.754256700904 
+ 4.7883197117241 -94.1001835238343 -119.516698163338 
+ 4.69689969548462 -94.6020851153425 -121.281599931321 
+ 4.55402167694679 -95.1105241491232 -123.041176241771 
+ 4.38977819141965 -95.5946488378874 -124.805681697171 
+ 4.2612624311607 -96.0533074698895 -126.580053852196 
+ 4.16836025934492 -96.4863084019774 -128.362882233175 
+ 4.09912888082457 -96.8987775932116 -130.151859012588 
+ 4.06159160387743 -97.327512119499 -131.937891883867 
+ 3.99256589143827 -97.7170795704595 -133.731974562141 
+ 3.94866105341696 -98.1148991883932 -135.524894272422 
+ 3.85901151803833 -98.4715859234941 -137.3247563686 
+ 3.75571068130109 -98.8105195774859 -139.127384582329 
+ 3.65027043226217 -99.1363383299934 -140.932198113913 
+ 3.54948185368284 -99.4524474596428 -142.739117866024 
+ 3.44286850609976 -99.7547642517054 -144.548105482012 
+ 3.31675657868549 -100.035614557355 -146.359337749301 
+ 3.16131902119488 -100.288699588747 -148.172381084717 
+ 3.0020922673923 -100.527727431656 -149.986960435605 
+ 2.87794162082443 -100.769809499231 -151.803888927688 
+ 2.78461914161425 -101.016921675203 -153.621928791739 
+ 2.71966651648847 -101.267830310802 -155.440763830596 
+ 2.56786292351075 -101.510271382486 -157.253759062791 
+ 2.32564793652452 -101.732103765785 -159.061289215187 
+ 1.97297476431886 -101.930412214494 -160.851592312073 
+ 1.54291514751261 -102.107926237538 -162.628877689484 
+ 1.15810417757656 -102.273548570495 -164.417124909888 
+ 0.849921044291409 -102.437756152254 -166.220575597592 
+ 0.622506164397309 -102.596245082186 -168.03606720098 
+ 0.465536602793189 -102.7515714695 -169.859811300213 
+ 0.346048948498505 -102.910901963611 -171.686123392681 
+ 0.265157330274296 -103.073739591687 -173.514168593157 
+ 0.222589678386885 -103.239041950105 -175.343379906768 
+ 0.212156996301808 -103.407713757193 -177.172777744772 
+ 0.235728889909637 -103.57795915768 -179.001945240534 
+ 0.260636555591174 -103.739914515629 -180.831844937843 
+ 0.256406148959304 -103.84895509223 -182.665471275958 
+ 0.241350897166182 -103.931922250591 -184.500743971498 
+ 0.215800694340249 -103.986998799473 -186.336642248116 
+ 0.166082446325956 -103.995413261204 -188.173173123611 
+ 0.145794489666571 -104.007047068492 -190.010248492628 
+ 0.179908606940386 -104.014236007047 -191.846940500071 
+ 0.24846829695612 -104.021824097047 -193.682765426023 
+ 0.357176841396691 -104.029516388039 -195.516517311523 
+ 0.50284451945111 -104.033069421571 -197.347935124707 
+ 0.631283313352951 -104.021254147125 -199.180626242603 
+ 0.734792646186686 -103.982920062486 -201.014498540608 
+ 0.821953077269277 -103.929289660223 -202.848822039466 
+ 0.890227208380225 -103.856216719978 -204.683225652338 
+ 0.948992502688781 -103.768498906991 -206.517399310607 
+ 1.02256227946083 -103.681241651457 -208.35104870599 
+ 1.15713302583994 -103.60554917494 -210.181773759438 
+ 1.30846883449616 -103.530358112981 -212.011191784159 
+ 1.50284179355937 -103.464435045216 -213.836661509863 
+ 1.72594152273593 -103.386800564219 -215.658525762638 
+ 1.93442473421174 -103.288788387051 -217.481010371453 
+ 2.10786253056165 -103.179753897158 -219.306665233502 
+ 2.27405788247361 -103.038633892842 -221.130688185931 
+ 2.40333228988395 -102.899518547172 -222.95794861398 
+ 2.56396571308552 -102.74304332127 -224.781073728439 
+ 2.70593362389145 -102.526045837384 -226.599795272139 
+ 2.88303053782594 -102.293421185091 -228.413332670816 
+ 3.0259770559294 -101.996366836656 -230.220657174016 
+ 3.15517330401385 -101.663863721752 -232.022751640294 
+ 3.33026229876187 -101.358104452877 -233.825774068701 
+ 3.49909213594502 -101.01837470878 -235.623156047178 
+ 3.70473176040316 -100.698629407825 -237.420386410734 
+ 3.89111082341808 -100.31131631686 -239.206355023616 
+ 4.06683100205902 -99.8519783685547 -240.976050882457 
+ 4.22856028739356 -99.324282333176 -242.728266770355 
+ 4.45624726578233 -98.7858889481167 -244.469608657252 
+ 4.67510180195296 -98.2886616625122 -246.224213189104 
+ 4.95266197092431 -97.8302285175105 -247.98117035821 
+ 5.11927959447604 -97.3666630430989 -249.750490928167 
+ 5.20285067372162 -96.8736115943767 -251.517095236503 
+ 5.23545762686472 -96.3620743971284 -253.281166536697 
+ 5.32054010020895 -95.8720530280068 -255.049549387019 
+ 5.41696001126154 -95.3949043054882 -256.819742746349 
+ 5.34964152477913 -94.8798337572174 -258.580452171991 
+ 5.21072958205197 -94.3246015329686 -260.325193787545 
+ 5.21938210187668 -93.7258990420221 -262.060471242697 
+ 5.37084740380656 -93.1940821696744 -263.810440663794 
+ 5.61828831508069 -92.8557573625366 -265.594521437931 
+ 5.27622693749996 -92.5526265 -267.303465 
+ </param>
+			<param name="pointColor">1 1 0 1 </param>
+			<param name="isClosed">0</param>
+			<param name="renderMode3d">0</param>
+			<param name="parentDataUid">data9</param>
+			<param name="poseLinked">0</param>
+		</property>
+	</property>
+	<property name="Display">
+		<param name="layoutMode">0</param>
+		<param name="focusedView">0</param>
+		<param name="viewOrder">0 1 2 3 4 </param>
+		<property name="Views">
+			<property name="0">
+				<param name="isVisible">0</param>
+				<param name="flip">1</param>
+				<param name="showZoom">1</param>
+			</property>
+			<property name="1">
+				<param name="isVisible">0</param>
+				<param name="flip">1</param>
+				<param name="showZoom">1</param>
+				<param name="viewMatrix">1 0 0 2.03074645996098 0 1 0 -126.663219928741 0 0 1 -186.377990722656 0 0 0 1 </param>
+				<param name="sliceMatrix">1 0 0 2.03074645996098 0 1 0 -126.663219928741 0 0 1 -186.377990722656 0 0 0 1 </param>
+			</property>
+			<property name="2">
+				<param name="isVisible">0</param>
+				<param name="flip">1</param>
+				<param name="showZoom">1</param>
+				<param name="viewMatrix">0 0 -1 2.03074645996098 1 0 0 -126.663219928741 0 -1 0 -186.377990722656 0 0 0 1 </param>
+				<param name="sliceMatrix">0 0 -1 2.03074645996098 1 0 0 -126.663219928741 0 -1 0 -186.377990722656 0 0 0 1 </param>
+			</property>
+			<property name="3">
+				<param name="isVisible">0</param>
+				<param name="flip">1</param>
+				<param name="showZoom">1</param>
+				<param name="viewMatrix">1 0 0 2.03074645996098 0 0 1 -126.663219928741 0 -1 0 -186.377990722656 0 0 0 1 </param>
+				<param name="sliceMatrix">1 0 0 2.03074645996098 0 0 1 -126.663219928741 0 -1 0 -186.377990722656 0 0 0 1 </param>
+			</property>
+			<property name="4">
+				<param name="isVisible">1</param>
+				<param name="volumeRendererName">General Purpose Volume Renderer</param>
+				<param name="sceneCenter">2.03074645996098 -126.663219928741 -186.377990722656 </param>
+				<param name="ssaoMode">1</param>
+				<property name="Camera">
+					<param name="poseMatrix">0.830468986322527 -0.113870556591157 -0.545302447361146 -117.267425519131 -0.517541570029618 0.204427194120887 -0.830879200362568 -128.076803041954 0.20608732626659 0.972236092029851 0.110837698039993 -325.199961907022 -0 0 0 1 </param>
+					<param name="focalLength">1.37373870972731 1.37373870972731 </param>
+				</property>
+				<property name="VolumeRenderer">
+					<param name="maxVolumesToDisplay">4</param>
+					<param name="mode">4</param>
+					<param name="ambientAttenuationDistance">0</param>
+				</property>
+				<property name="SSAO">
+					<param name="ssaoStrength">0.75</param>
+					<param name="occlusionRadius">21</param>
+				</property>
+			</property>
+		</property>
+		<property name="VisibleData">
+			<property name="0">
+				<param name="visible"/>
+			</property>
+			<property name="1">
+				<param name="visible">"data9" </param>
+			</property>
+			<property name="2">
+				<param name="visible">"data9" </param>
+			</property>
+			<property name="3">
+				<param name="visible">"data9" </param>
+			</property>
+			<property name="4">
+				<param name="visible">"data9" </param>
+			</property>
+		</property>
+	</property>
+</propertyfile>
+
