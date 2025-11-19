@@ -64,6 +64,7 @@ rosrun iiwa_probe_utils add_patient_cloud_on_table.py \
   _align_mesh_yaw_with_table:=false _table_yaw:=1.5708 \
   _z_lift:=0.12
 ```
+This version is the one with the correct topic name:
 ```
 rosrun iiwa_probe_utils add_patient_cloud_on_table.py \
   _pcd_path:=/home/chiararipiemo/iiwa_stack_ws/src/iiwa_probe_utils/cloudpoint/Segmentation_decimated_better_points.pcd \
