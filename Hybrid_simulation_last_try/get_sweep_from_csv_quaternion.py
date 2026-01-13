@@ -8,12 +8,11 @@ import numpy as np
 import imfusion as imf
 import imfusion.ultrasound as us
 
-# ============================================================
+
 # CONFIG
-# ============================================================
 
 CSV_PATH  = r"/home/chiararipiemo/Hybrid_simulation_last_try/pose_from_robot_for_imfusion.csv"
-CSV_UNITS = "mm"   # "mm" or "m"
+CSV_UNITS = "mm"   # "mm" because imfsion works in simulation
 
 SWEEP_NAME   = "Sweep from CSV (quaternion driven, convex)"
 SWEEP_TIME_S = 3.0
@@ -34,12 +33,12 @@ LONG_RADIUS_MM      = 100.0
 # If the tracking pose is at the probe tip, the image center must be shifted by ~DEPTH/2 along the beam.
 START_AT_PROBE_TIP = True
 
-# If START_AT_PROBE_TIP=True, we override this with DEPTH_MM/2 automatically.
+# If START_AT_PROBE_TIP=True, i override this with DEPTH_MM/2 automatically.
 OFFSET_ALONG_BEAM_MM = 30.0
 
 # Probe axes mapping (from RViz frame):
-# - beam/depth is along +Z (blue) in your case
-# - lateral choose +X (red) first; flip if mirrored
+# - beam/depth is along +Z 
+
 PROBE_DEPTH_AXIS_LOCAL   = np.array([0.0, 0.0, 1.0], dtype=float)  # beam = +Z (blue)
 PROBE_LATERAL_AXIS_LOCAL = np.array([1.0, 0.0, 0.0], dtype=float)  # lateral = +X (red)
 
@@ -48,9 +47,9 @@ DUPLICATE_SINGLE_POSE = True
 DUPLICATE_SHIFT_MM    = 0.1
 
 
-# ============================================================
+
 # Helpers
-# ============================================================
+
 
 def ensure_app():
     if not getattr(imf, "app", None):
@@ -234,9 +233,8 @@ def build_image_pose(p_world, R_probe_to_world, offset_along_beam_mm):
     return T
 
 
-# ============================================================
 # Main
-# ============================================================
+
 
 def main():
     ensure_app()
@@ -294,4 +292,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
