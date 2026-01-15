@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<propertyfile version="1.1" name="" comment="Written by ImFusionLib, 2026-01-15 09:22:44">
+	<param name="workspaceVersion">29</param>
+	<property name="Datasets">
+		<property name="Data">
+			<param name="topDown">1</param>
+			<param name="filename">segm_relabel_therightone.nii.gz</param>
+			<param name="name">segm_relabel_therightone</param>
+			<param name="original">1</param>
+			<param name="transformation">-1 -6.12323413147183e-16 0 2.03074645996097 6.12323413147183e-16 -1 0 -126.663219928742 0 0 1 186.377990722656 0 0 0 1 </param>
+			<param name="uid">data0</param>
+			<property name="Components">
+				<property name="DisplayOptions2d">
+					<property name="TransferFunction">
+						<param name="window">255</param>
+						<param name="level">127.5</param>
+						<param name="mode">0</param>
+					</property>
+				</property>
+				<property name="DisplayOptions3d">
+					<property name="TransferFunction">
+						<param name="window">2774</param>
+						<param name="level">363</param>
+						<param name="presetName">CT Bone</param>
+						<param name="mode">0</param>
+						<property name="Tissues">
+							<property name="Tissue">
+								<property name="KeyPoint">
+									<param name="position">0.4</param>
+									<param name="color">0.752941176470588 0.250980392156863 0.125490196078431 0 </param>
+								</property>
+								<property name="KeyPoint">
+									<param name="position">0.475</param>
+									<param name="color">0.975 0.9 0.82 0.5 </param>
+								</property>
+								<property name="KeyPoint">
+									<param name="position">0.5</param>
+									<param name="color">1 1 1 0.6 </param>
+								</property>
+								<property name="KeyPoint">
+									<param name="position">1</param>
+									<param name="color">0.9 0.9 0.9 0.6 </param>
+								</property>
+							</property>
+						</property>
+					</property>
+				</property>
+				<property name="LabelDataComponent">
+					<property name="LabelConfig">
+						<param name="pixelValue">3</param>
+						<param name="snomedCategoryCodeValue"/>
+						<param name="snomedCategoryCodeMeaning"/>
+						<param name="snomedTypeCodeValue"/>
+						<param name="snomedTypeCodeMeaning"/>
+					</property>
+					<property name="LabelConfig">
+						<param name="pixelValue">6</param>
+						<param name="snomedCategoryCodeValue"/>
+						<param name="snomedCategoryCodeMeaning"/>
+						<param name="snomedTypeCodeValue"/>
+						<param name="snomedTypeCodeMeaning"/>
+					</property>
+					<property name="LabelConfig">
+						<param name="pixelValue">8</param>
+						<param name="snomedCategoryCodeValue"/>
+						<param name="snomedCategoryCodeMeaning"/>
+						<param name="snomedTypeCodeValue"/>
+						<param name="snomedTypeCodeMeaning"/>
+					</property>
+					<property name="LabelConfig">
+						<param name="pixelValue">12</param>
+						<param name="isVisible2d">0</param>
+						<param name="isVisible3d">0</param>
+						<param name="snomedCategoryCodeValue"/>
+						<param name="snomedCategoryCodeMeaning"/>
+						<param name="snomedTypeCodeValue"/>
+						<param name="snomedTypeCodeMeaning"/>
+					</property>
+					<property name="LabelConfig">
+						<param name="pixelValue">13</param>
+						<param name="snomedCategoryCodeValue"/>
+						<param name="snomedCategoryCodeMeaning"/>
+						<param name="snomedTypeCodeValue"/>
+						<param name="snomedTypeCodeMeaning"/>
+					</property>
+				</property>
+			</property>
+		</property>
+		<property name="Data">
+			<param name="topDown">1</param>
+			<param name="original">1</param>
+			<param name="blockId">1</param>
+			<param name="uid">data1</param>
+			<param name="name">Sweep from CSV (quaternion driven)</param>
+			<property name="MetaData">
+				<param name="topDown">1</param>
+			</property>
+			<property name="Components">
+				<property name="DisplayOptions2d">
+					<property name="TransferFunction">
+						<param name="window">255</param>
+						<param name="level">127.5</param>
+						<param name="mode">0</param>
+					</property>
+				</property>
+				<property name="DisplayOptions3d">
+					<property name="TransferFunction">
+						<param name="window">255</param>
+						<param name="level">127.5</param>
+						<param name="mode">0</param>
+						<property name="Tissues">
+							<property name="Tissue">
+								<property name="KeyPoint">
+									<param name="position">0.2</param>
+									<param name="color">0.1 0.05 0 0.35 </param>
+								</property>
+								<property name="KeyPoint">
+									<param name="position">0.6</param>
+									<param name="color">1 1 1 0.5 </param>
+								</property>
+								<property name="KeyPoint">
+									<param name="position">0.65</param>
+									<param name="color">1 0.8 0.5 0.8 </param>
+								</property>
+								<property name="KeyPoint">
+									<param name="position">1</param>
+									<param name="color">1 0.9 0.7 0.8 </param>
+								</property>
+							</property>
+						</property>
+					</property>
+				</property>
+			</property>
+		</property>
+	</property>
+	<property name="Interface">
+		<param name="outputUids">"data0" "data1" </param>
+		<param name="inputUids"/>
+	</property>
+	<property name="Algorithms">
+		<property name="IO.NiftiIo">
+			<param name="location">segm_relabel_therightone.nii.gz</param>
+			<param name="execute">1</param>
+			<param name="inputUids"/>
+			<param name="outputUids">"data0" </param>
+		</property>
+		<property name="Base.SetModality">
+			<param name="modality">8</param>
+			<param name="resetDisplayOptions">1</param>
+			<param name="execute">1</param>
+			<param name="inputUids">"data0" </param>
+			<param name="outputUids"/>
+		</property>
+		<property name="IO.ImFusionFileIo">
+			<param name="location">Sweep from CSV (quaternion driven).imf</param>
+			<param name="execute">1</param>
+			<param name="inputUids">"1" </param>
+			<param name="outputUids">"data1" </param>
+		</property>
+		<property name="IO.ImFusionFileIo">
+			<param name="location">Sweep from CSV (quaternion driven, convex)_2.imf</param>
+			<param name="execute">1</param>
+			<param name="inputUids">"2" </param>
+			<param name="outputUids">"data2" </param>
+		</property>
+	</property>
+	<property name="Annotations">
+		<property name="GlSpline">
+			<param name="editable">1</param>
+			<param name="color">1 1 0 1 </param>
+			<param name="lineWidth">1</param>
+			<param name="labelVisible">1</param>
+			<param name="labelBackgroundVisible">0</param>
+			<param name="labelBackgroundColor">0.3 0.3 0.3 0.7 </param>
+			<param name="labelBackgroundMargin">3</param>
+			<param name="labelDepthTest">1</param>
+			<param name="labelColor">0 1 1 </param>
+			<param name="labelText">1.0 mm</param>
+			<param name="name">Transducer Spline</param>
+			<param name="points">25.9372388711184 -23.3248109257182 -115.978643959664 
+ 25.9372315642721 -23.3274600464203 -115.988391395797 
+ 25.9372242574257 -23.3301091671225 -115.998138831931 
+ 25.9372169505793 -23.3327582878246 -116.007886268064 
+ 25.937209643733 -23.3354074085268 -116.017633704198 
+ 25.9372023368866 -23.3380565292289 -116.027381140331 
+ 25.9371950300403 -23.3407056499311 -116.037128576464 
+ 25.9371877231939 -23.3433547706332 -116.046876012598 
+ 25.9371804163475 -23.3460038913354 -116.056623448731 
+ 25.9371731095012 -23.3486530120375 -116.066370884865 
+ 25.9371658026548 -23.3513021327397 -116.076118320998 
+ 25.9371584958084 -23.3539512534418 -116.085865757132 
+ 25.9371511889621 -23.356600374144 -116.095613193265 
+ 25.9371438821157 -23.3592494948461 -116.105360629399 
+ 25.9371365752693 -23.3618986155483 -116.115108065532 
+ 25.937129268423 -23.3645477362504 -116.124855501666 
+ 25.9371219615766 -23.3671968569526 -116.134602937799 
+ 25.9371146547302 -23.3698459776547 -116.144350373933 
+ 25.9371073478839 -23.3724950983569 -116.154097810066 
+ 25.9371000410375 -23.375144219059 -116.163845246199 
+ 25.9370927341911 -23.3777933397612 -116.173592682333 
+ 25.9370854273448 -23.3804424604634 -116.183340118466 
+ 25.9370781204984 -23.3830915811655 -116.1930875546 
+ 25.937070813652 -23.3857407018677 -116.202834990733 
+ 25.9370635068057 -23.3883898225698 -116.212582426867 
+ 25.9370561999593 -23.391038943272 -116.222329863 
+ 25.9370488931129 -23.3936880639741 -116.232077299134 
+ 25.9370415862666 -23.3963371846763 -116.241824735267 
+ 25.9370342794202 -23.3989863053784 -116.251572171401 
+ 25.9370269725738 -23.4016354260806 -116.261319607534 
+ 25.9370196657275 -23.4042845467827 -116.271067043668 
+ 25.9370123588811 -23.4069336674849 -116.280814479801 
+ 25.9370050520347 -23.409582788187 -116.290561915934 
+ 25.9369977451884 -23.4122319088892 -116.300309352068 
+ 25.936990438342 -23.4148810295913 -116.310056788201 
+ 25.9369831314957 -23.4175301502935 -116.319804224335 
+ 25.9369758246493 -23.4201792709956 -116.329551660468 
+ 25.9369685178029 -23.4228283916978 -116.339299096602 
+ 25.9369612109566 -23.4254775123999 -116.349046532735 
+ 25.9369539041102 -23.4281266331021 -116.358793968869 
+ 25.9369465972638 -23.4307757538042 -116.368541405002 
+ 25.9369392904175 -23.4334248745064 -116.378288841136 
+ 25.9369319835711 -23.4360739952085 -116.388036277269 
+ 25.9369246767247 -23.4387231159107 -116.397783713403 
+ 25.9369173698784 -23.4413722366128 -116.407531149536 
+ 25.936910063032 -23.444021357315 -116.417278585669 
+ 25.9369027561856 -23.4466704780171 -116.427026021803 
+ 25.9368954493393 -23.4493195987193 -116.436773457936 
+ 25.9368881424929 -23.4519687194215 -116.44652089407 
+ 25.9368808356465 -23.4546178401236 -116.456268330203 
+ 25.9368735288002 -23.4572669608258 -116.466015766337 
+ 25.9368662219538 -23.4599160815279 -116.47576320247 
+ 25.9368589151074 -23.4625652022301 -116.485510638604 
+ 25.9368516082611 -23.4652143229322 -116.495258074737 
+ 25.9368443014147 -23.4678634436344 -116.505005510871 
+ 25.9368369945683 -23.4705125643365 -116.514752947004 
+ 25.936829687722 -23.4731616850387 -116.524500383138 
+ 25.9368223808756 -23.4758108057408 -116.534247819271 
+ 25.9368150740293 -23.478459926443 -116.543995255404 
+ 25.9368077671829 -23.4811090471451 -116.553742691538 
+ 25.9368004603365 -23.4837581678473 -116.563490127671 
+ 25.9367931534902 -23.4864072885494 -116.573237563805 
+ 25.9367858466438 -23.4890564092516 -116.582984999938 
+ 25.9367785397974 -23.4917055299537 -116.592732436072 
+ 25.9367712329511 -23.4943546506559 -116.602479872205 
+ 25.9367639261047 -23.497003771358 -116.612227308339 
+ 25.9367566192583 -23.4996528920602 -116.621974744472 
+ 25.936749312412 -23.5023020127623 -116.631722180606 
+ 25.9367420055656 -23.5049511334645 -116.641469616739 
+ 25.9367346987192 -23.5076002541666 -116.651217052873 
+ 25.9367273918729 -23.5102493748688 -116.660964489006 
+ 25.9367200850265 -23.5128984955709 -116.670711925139 
+ 25.9367127781801 -23.5155476162731 -116.680459361273 
+ 25.9367054713338 -23.5181967369752 -116.690206797406 
+ 25.9366981644874 -23.5208458576774 -116.69995423354 
+ 25.936690857641 -23.5234949783795 -116.709701669673 
+ 25.9366835507947 -23.5261440990817 -116.719449105807 
+ 25.9366762439483 -23.5287932197839 -116.72919654194 
+ 25.9366689371019 -23.531442340486 -116.738943978074 
+ 25.9366616302556 -23.5340914611882 -116.748691414207 
+ 25.9366543234092 -23.5367405818903 -116.758438850341 
+ 25.9366470165629 -23.5393897025925 -116.768186286474 
+ 25.9366397097165 -23.5420388232946 -116.777933722608 
+ 25.9366324028701 -23.5446879439968 -116.787681158741 
+ 25.9366250960238 -23.5473370646989 -116.797428594875 
+ 25.9366177891774 -23.5499861854011 -116.807176031008 
+ 25.936610482331 -23.5526353061032 -116.816923467141 
+ 25.9366031754847 -23.5552844268054 -116.826670903275 
+ 25.9365958686383 -23.5579335475075 -116.836418339408 
+ 25.9365885617919 -23.5605826682097 -116.846165775542 
+ 25.9365812549456 -23.5632317889118 -116.855913211675 
+ 25.9365739480992 -23.565880909614 -116.865660647809 
+ 25.9365666412528 -23.5685300303161 -116.875408083942 
+ 25.9365593344065 -23.5711791510183 -116.885155520076 
+ 25.9365520275601 -23.5738282717204 -116.894902956209 
+ 25.9365447207137 -23.5764773924226 -116.904650392343 
+ 25.9365374138674 -23.5791265131247 -116.914397828476 
+ 25.936530107021 -23.5817756338269 -116.92414526461 
+ 25.9365228001746 -23.584424754529 -116.933892700743 
+ 25.9365154933283 -23.5870738752312 -116.943640136876 
+ </param>
+			<param name="labelPixelOffset">-0.0361688895062389 -19.6697212135148 </param>
+			<param name="isClosed">0</param>
+			<param name="renderMode3d">0</param>
+			<param name="parentDataUid">data0</param>
+			<param name="poseLinked">0</param>
+		</property>
+		<property name="GlSpline">
+			<param name="editable">1</param>
+			<param name="color">1 1 0 1 </param>
+			<param name="lineWidth">1</param>
+			<param name="labelVisible">1</param>
+			<param name="labelBackgroundVisible">0</param>
+			<param name="labelBackgroundColor">0.3 0.3 0.3 0.7 </param>
+			<param name="labelBackgroundMargin">3</param>
+			<param name="labelDepthTest">1</param>
+			<param name="labelColor">0 1 1 </param>
+			<param name="labelText">1.0 mm</param>
+			<param name="name">Direction Spline</param>
+			<param name="points">33.5973873344593 -90.4703391740006 -97.7358327243063 
+ 33.5973800276129 -90.4729882946997 -97.7455801604287 
+ 33.5973727207666 -90.4756374154056 -97.7553275965758 
+ 33.5973654139202 -90.4782865361109 -97.7650750327207 
+ 33.5973581070738 -90.4809356568093 -97.7748224688404 
+ 33.5973508002275 -90.4835847775079 -97.7845699049609 
+ 33.5973434933811 -90.4862338982102 -97.7943173410947 
+ 33.5973361865347 -90.4888830189158 -97.8040647772408 
+ 33.5973288796884 -90.4915321396179 -97.8138122133743 
+ 33.597321572842 -90.4941812603173 -97.8235596494976 
+ 33.5973142659956 -90.4968303810195 -97.8333070856311 
+ 33.5973069591493 -90.4994795017277 -97.8430545217871 
+ 33.5972996523029 -90.5021286224267 -97.8528019579088 
+ 33.5972923454565 -90.5047777431256 -97.8625493940302 
+ 33.5972850386102 -90.5074268638308 -97.8722968301751 
+ 33.5972777317638 -90.5100759845332 -97.8820442663095 
+ 33.5972704249174 -90.5127251052357 -97.8917917024443 
+ 33.5972631180711 -90.5153742259376 -97.9015391385768 
+ 33.5972558112247 -90.5180233466391 -97.9112865747076 
+ 33.5972485043783 -90.5206724673418 -97.9210340108431 
+ 33.597241197532 -90.523321588044 -97.9307814469769 
+ 33.5972338906856 -90.5259707087459 -97.9405288831093 
+ 33.5972265838392 -90.5286198294483 -97.9502763192438 
+ 33.5972192769929 -90.5312689501502 -97.9600237553762 
+ 33.5972119701465 -90.5339180708527 -97.969771191511 
+ 33.5972046633002 -90.5365671915514 -97.9795186276318 
+ 33.5971973564538 -90.5392163122532 -97.9892660637639 
+ 33.5971900496074 -90.5418654329557 -97.9990134998987 
+ 33.5971827427611 -90.5445145536578 -98.0087609360321 
+ 33.5971754359147 -90.547163674363 -98.0185083721767 
+ 33.5971681290683 -90.549812795069 -98.0282558083241 
+ 33.597160822222 -90.552461915768 -98.0380032444462 
+ 33.5971535153756 -90.5551110364664 -98.0477506805657 
+ 33.5971462085292 -90.5577601571723 -98.0574981167131 
+ 33.5971389016829 -90.5604092778742 -98.0672455528456 
+ 33.5971315948365 -90.5630583985726 -98.0769929889651 
+ 33.5971242879901 -90.5657075192783 -98.0867404251119 
+ 33.5971169811438 -90.56835663998 -98.0964878612434 
+ 33.5971096742974 -90.5710057606795 -98.1062352973671 
+ 33.597102367451 -90.5736548813855 -98.1159827335149 
+ 33.5970950606047 -90.5763040020867 -98.1257301696448 
+ 33.5970877537583 -90.578953122792 -98.13547760579 
+ 33.5970804469119 -90.5816022434944 -98.1452250419244 
+ 33.5970731400656 -90.5842513641898 -98.1549724780328 
+ 33.5970658332192 -90.5869004848923 -98.1647199141675 
+ 33.5970585263729 -90.5895496055948 -98.1744673503023 
+ 33.5970512195265 -90.5921987262962 -98.1842147864332 
+ 33.5970439126801 -90.5948478470021 -98.1939622225803 
+ 33.5970366058337 -90.5974969677047 -98.2037096587154 
+ 33.5970292989874 -90.600146088406 -98.2134570948459 
+ 33.597021992141 -90.6027952091055 -98.2232045309693 
+ 33.5970146852947 -90.6054443298108 -98.2329519671145 
+ 33.5970073784483 -90.6080934505156 -98.2426994032577 
+ 33.5970000716019 -90.6107425712116 -98.2524468393687 
+ 33.5969927647556 -90.6133916919172 -98.2621942755149 
+ 33.5969854579092 -90.6160408126224 -98.2719417116594 
+ 33.5969781510628 -90.6186899333211 -98.2816891477802 
+ 33.5969708442165 -90.6213390540233 -98.2914365839137 
+ 33.5969635373701 -90.6239881747258 -98.3011840200484 
+ 33.5969562305238 -90.6266372954215 -98.3109314561584 
+ 33.5969489236774 -90.6292864161233 -98.3206788922906 
+ 33.596941616831 -90.6319355368322 -98.3304263284488 
+ 33.5969343099846 -90.6345846575344 -98.3401737645823 
+ 33.5969270031383 -90.6372337782362 -98.3499212007144 
+ 33.5969196962919 -90.6398828989387 -98.3596686368492 
+ 33.5969123894455 -90.6425320196406 -98.3694160729817 
+ 33.5969050825992 -90.6451811403427 -98.3791635091151 
+ 33.5968977757528 -90.6478302610455 -98.3889109452509 
+ 33.5968904689064 -90.6504793817473 -98.398658381383 
+ 33.5968831620601 -90.6531285024491 -98.4084058175152 
+ 33.5968758552137 -90.6557776231517 -98.4181532536503 
+ 33.5968685483674 -90.6584267438507 -98.4279006897723 
+ 33.596861241521 -90.6610758645555 -98.4376481259156 
+ 33.5968539346746 -90.6637249852611 -98.4473955620618 
+ 33.5968466278282 -90.6663741059602 -98.4571429981838 
+ 33.5968393209819 -90.6690232266553 -98.4668904342912 
+ 33.5968320141355 -90.6716723473578 -98.476637870426 
+ 33.5968247072892 -90.674321468067 -98.4863853065855 
+ 33.5968174004428 -90.6769705887688 -98.4961327427177 
+ 33.5968100935964 -90.679619709471 -98.5058801788511 
+ 33.5968027867501 -90.6822688301728 -98.5156276149836 
+ 33.5967954799037 -90.684917950875 -98.5253750511171 
+ 33.5967881730573 -90.6875670715777 -98.5351224872528 
+ 33.596780866211 -90.6902161922796 -98.544869923385 
+ 33.5967735593646 -90.6928653129814 -98.5546173595171 
+ 33.5967662525182 -90.6955144336839 -98.5643647956519 
+ 33.5967589456719 -90.6981635543826 -98.574112231773 
+ 33.5967516388255 -90.7008126750875 -98.5838596679165 
+ 33.5967443319791 -90.7034617957934 -98.5936071040637 
+ 33.5967370251328 -90.7061109164925 -98.6033545401858 
+ 33.5967297182864 -90.7087600371946 -98.6131019763192 
+ 33.5967224114401 -90.7114091578904 -98.6228494124292 
+ 33.5967151045937 -90.7140582785922 -98.6325968485614 
+ 33.5967077977473 -90.7167073993007 -98.6423442847183 
+ 33.5967004909009 -90.7193565200032 -98.6520917208531 
+ 33.5966931840546 -90.7220056407085 -98.6618391569979 
+ 33.5966858772082 -90.7246547614073 -98.671586593119 
+ 33.5966785703619 -90.7273038821067 -98.6813340292424 
+ 33.5966712635155 -90.7299530028118 -98.6910814653869 
+ 33.5966639566691 -90.7326021235136 -98.7008289015191 
+ </param>
+			<param name="labelPixelOffset">-0.0361688895103252 -19.6697212134921 </param>
+			<param name="isClosed">0</param>
+			<param name="renderMode3d">0</param>
+			<param name="parentDataUid">data0</param>
+			<param name="poseLinked">0</param>
+		</property>
+		<property name="GlPoint">
+			<param name="visible">0</param>
+			<param name="editable">1</param>
+			<param name="color">1 0 0 1 </param>
+			<param name="lineWidth">1</param>
+			<param name="labelVisible">1</param>
+			<param name="labelBackgroundVisible">0</param>
+			<param name="labelBackgroundColor">0.3 0.3 0.3 0.7 </param>
+			<param name="labelBackgroundMargin">3</param>
+			<param name="labelDepthTest">1</param>
+			<param name="labelColor">0 1 1 </param>
+			<param name="labelText">Label</param>
+			<param name="name">Label</param>
+			<param name="points">21.2327346801758 -78.7617111206055 -51.152660369873 
+ </param>
+			<param name="maxPoints">1</param>
+			<param name="pointColor">1 0 0 1 </param>
+			<param name="poseLinked">0</param>
+		</property>
+		<property name="GlPoint">
+			<param name="visible">0</param>
+			<param name="editable">1</param>
+			<param name="color">1 0 0 1 </param>
+			<param name="lineWidth">1</param>
+			<param name="labelVisible">1</param>
+			<param name="labelBackgroundVisible">0</param>
+			<param name="labelBackgroundColor">0.3 0.3 0.3 0.7 </param>
+			<param name="labelBackgroundMargin">3</param>
+			<param name="labelDepthTest">1</param>
+			<param name="labelColor">0 1 1 </param>
+			<param name="labelText">Label 1</param>
+			<param name="name">Label 1</param>
+			<param name="points">-16.4150238037109 -108.106582641602 -149.20036315918 
+ </param>
+			<param name="maxPoints">1</param>
+			<param name="pointColor">1 0 0 1 </param>
+			<param name="poseLinked">0</param>
+		</property>
+		<property name="GlPoint">
+			<param name="visible">0</param>
+			<param name="editable">1</param>
+			<param name="color">1 0 0 1 </param>
+			<param name="lineWidth">1</param>
+			<param name="labelVisible">1</param>
+			<param name="labelBackgroundVisible">0</param>
+			<param name="labelBackgroundColor">0.3 0.3 0.3 0.7 </param>
+			<param name="labelBackgroundMargin">3</param>
+			<param name="labelDepthTest">1</param>
+			<param name="labelColor">0 1 1 </param>
+			<param name="labelText">Label 2</param>
+			<param name="name">Label 2</param>
+			<param name="points">-18.6949844360352 -102.850540161133 -134.03108215332 
+ </param>
+			<param name="maxPoints">1</param>
+			<param name="pointColor">1 0 0 1 </param>
+			<param name="poseLinked">0</param>
+		</property>
+		<property name="GlPoint">
+			<param name="visible">0</param>
+			<param name="editable">1</param>
+			<param name="color">1 0 0 1 </param>
+			<param name="lineWidth">1</param>
+			<param name="labelVisible">1</param>
+			<param name="labelBackgroundVisible">0</param>
+			<param name="labelBackgroundColor">0.3 0.3 0.3 0.7 </param>
+			<param name="labelBackgroundMargin">3</param>
+			<param name="labelDepthTest">1</param>
+			<param name="labelColor">0 1 1 </param>
+			<param name="labelText">Label 3</param>
+			<param name="name">Label 3</param>
+			<param name="points">-15.8416690826416 -90.7911224365234 -122.187133789062 
+ </param>
+			<param name="maxPoints">1</param>
+			<param name="pointColor">1 0 0 1 </param>
+			<param name="poseLinked">0</param>
+		</property>
+		<property name="GlPoint">
+			<param name="visible">0</param>
+			<param name="editable">1</param>
+			<param name="color">1 0 0 1 </param>
+			<param name="lineWidth">1</param>
+			<param name="labelVisible">1</param>
+			<param name="labelBackgroundVisible">0</param>
+			<param name="labelBackgroundColor">0.3 0.3 0.3 0.7 </param>
+			<param name="labelBackgroundMargin">3</param>
+			<param name="labelDepthTest">1</param>
+			<param name="labelColor">0 1 1 </param>
+			<param name="labelText">Label 4</param>
+			<param name="name">Label 4</param>
+			<param name="points">-19.2865009307861 -97.9984512329102 -119.915802001953 
+ </param>
+			<param name="maxPoints">1</param>
+			<param name="pointColor">1 0 0 1 </param>
+			<param name="poseLinked">0</param>
+		</property>
+		<property name="GlPoint">
+			<param name="visible">0</param>
+			<param name="editable">1</param>
+			<param name="color">1 0 0 1 </param>
+			<param name="lineWidth">1</param>
+			<param name="labelVisible">1</param>
+			<param name="labelBackgroundVisible">0</param>
+			<param name="labelBackgroundColor">0.3 0.3 0.3 0.7 </param>
+			<param name="labelBackgroundMargin">3</param>
+			<param name="labelDepthTest">1</param>
+			<param name="labelColor">0 1 1 </param>
+			<param name="labelText">Label 5</param>
+			<param name="name">Label 5</param>
+			<param name="points">-15.8583927154541 -98.8166656494141 -120.665901184082 
+ </param>
+			<param name="maxPoints">1</param>
+			<param name="pointColor">1 0 0 1 </param>
+			<param name="poseLinked">0</param>
+		</property>
+		<property name="GlPoint">
+			<param name="visible">0</param>
+			<param name="editable">1</param>
+			<param name="color">1 0 0 1 </param>
+			<param name="lineWidth">1</param>
+			<param name="labelVisible">1</param>
+			<param name="labelBackgroundVisible">0</param>
+			<param name="labelBackgroundColor">0.3 0.3 0.3 0.7 </param>
+			<param name="labelBackgroundMargin">3</param>
+			<param name="labelDepthTest">1</param>
+			<param name="labelColor">0 1 1 </param>
+			<param name="labelText">Label 6</param>
+			<param name="name">Label 6</param>
+			<param name="points">23.8174095153809 -101.43839263916 -118.731719970703 
+ </param>
+			<param name="maxPoints">1</param>
+			<param name="pointColor">1 0 0 1 </param>
+			<param name="poseLinked">0</param>
+		</property>
+		<property name="GlPoint">
+			<param name="visible">0</param>
+			<param name="editable">1</param>
+			<param name="color">1 0 0 1 </param>
+			<param name="lineWidth">1</param>
+			<param name="labelVisible">1</param>
+			<param name="labelBackgroundVisible">0</param>
+			<param name="labelBackgroundColor">0.3 0.3 0.3 0.7 </param>
+			<param name="labelBackgroundMargin">3</param>
+			<param name="labelDepthTest">1</param>
+			<param name="labelColor">0 1 1 </param>
+			<param name="labelText">Label 7</param>
+			<param name="name">Label 7</param>
+			<param name="points">-16.9975757598877 -99.5116653442383 -132.276184082031 
+ </param>
+			<param name="maxPoints">1</param>
+			<param name="pointColor">1 0 0 1 </param>
+			<param name="poseLinked">0</param>
+		</property>
+		<property name="GlPoint">
+			<param name="editable">1</param>
+			<param name="color">1 0 0 1 </param>
+			<param name="lineWidth">1</param>
+			<param name="labelVisible">1</param>
+			<param name="labelBackgroundVisible">0</param>
+			<param name="labelBackgroundColor">0.3 0.3 0.3 0.7 </param>
+			<param name="labelBackgroundMargin">3</param>
+			<param name="labelDepthTest">1</param>
+			<param name="labelColor">0 1 1 </param>
+			<param name="labelText">Label 8</param>
+			<param name="name">Label 8</param>
+			<param name="points">-16.9775085449219 -96.4845352172852 -121.479827880859 
+ </param>
+			<param name="maxPoints">1</param>
+			<param name="pointColor">1 0 0 1 </param>
+			<param name="poseLinked">0</param>
+		</property>
+	</property>
+	<property name="Display">
+		<param name="layoutMode">0</param>
+		<param name="maximisedView">4</param>
+		<param name="focusedView">0</param>
+		<param name="viewOrder">0 1 2 3 4 </param>
+		<property name="Views">
+			<property name="0">
+				<param name="isVisible">0</param>
+				<param name="flip">1</param>
+				<param name="showZoom">1</param>
+			</property>
+			<property name="1">
+				<param name="isVisible">0</param>
+				<param name="flip">1</param>
+				<param name="showZoom">1</param>
+				<param name="viewMatrix">1 0 0 2.03074645996104 0 1 0 -126.663219928742 0 0 1 -187.877990722656 0 0 0 1 </param>
+				<param name="sliceMatrix">1 0 0 2.03074645996104 0 1 0 -126.663219928742 0 0 1 -187.877990722656 0 0 0 1 </param>
+			</property>
+			<property name="2">
+				<param name="isVisible">0</param>
+				<param name="flip">1</param>
+				<param name="showZoom">1</param>
+				<param name="viewMatrix">0 0 -1 7.22605895996104 1 0 0 -126.663219928742 0 -1 0 -186.377990722656 0 0 0 1 </param>
+				<param name="sliceMatrix">0 0 -1 7.22605895996105 1 0 0 -126.663219928742 0 -1 0 -186.377990722656 0 0 0 1 </param>
+			</property>
+			<property name="3">
+				<param name="isVisible">0</param>
+				<param name="flip">1</param>
+				<param name="showZoom">1</param>
+				<param name="viewMatrix">1 0 0 2.03074645996104 0 0 1 -126.663219928742 0 -1 0 -186.377990722656 0 0 0 1 </param>
+				<param name="sliceMatrix">1 0 0 2.03074645996104 0 0 1 -126.663219928742 0 -1 0 -186.377990722656 0 0 0 1 </param>
+			</property>
+			<property name="4">
+				<param name="isVisible">1</param>
+				<param name="volumeRendererName">General Purpose Volume Renderer</param>
+				<param name="sceneCenter">2.03074645996104 -126.663219928742 -186.377990722656 </param>
+				<param name="ssaoMode">1</param>
+				<property name="Camera">
+					<param name="poseMatrix">0.884202497321754 0.222791187002908 0.410548451128259 101.843956643285 -0.0567621917448908 0.923658372266189 -0.37898979528596 55.2502310035944 -0.46364210045928 0.311800093547798 0.829347155505637 -203.132335992492 -0 0 -0 1 </param>
+					<param name="focalLength">1.37373870972731 1.37373870972731 </param>
+				</property>
+				<property name="VolumeRenderer">
+					<param name="maxVolumesToDisplay">4</param>
+					<param name="mode">4</param>
+					<param name="ambientAttenuationDistance">0</param>
+				</property>
+				<property name="SSAO">
+					<param name="ssaoStrength">0.5</param>
+					<param name="occlusionRadius">21</param>
+				</property>
+			</property>
+		</property>
+		<property name="VisibleData">
+			<property name="0">
+				<param name="visible">"2" </param>
+			</property>
+			<property name="1">
+				<param name="visible">"2" "data0" </param>
+			</property>
+			<property name="2">
+				<param name="visible">"2" "data0" </param>
+			</property>
+			<property name="3">
+				<param name="visible">"2" "data0" </param>
+			</property>
+			<property name="4">
+				<param name="visible">"2" "data0" </param>
+			</property>
+		</property>
+	</property>
+</propertyfile>
