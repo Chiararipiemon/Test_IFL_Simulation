@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<propertyfile version="1.1" name="" comment="Written by ImFusionLib, 2026-01-15 09:22:44">
+<propertyfile version="1.1" name="" comment="Written by ImFusionLib, 2026-01-15 09:28:41">
 	<param name="workspaceVersion">29</param>
 	<property name="Datasets">
 		<property name="Data">
@@ -8,7 +8,11 @@
 			<param name="name">segm_relabel_therightone</param>
 			<param name="original">1</param>
 			<param name="transformation">-1 -6.12323413147183e-16 0 2.03074645996097 6.12323413147183e-16 -1 0 -126.663219928742 0 0 1 186.377990722656 0 0 0 1 </param>
+			<param name="blockId">1</param>
 			<param name="uid">data0</param>
+			<property name="MetaData">
+				<param name="topDown">1</param>
+			</property>
 			<property name="Components">
 				<property name="DisplayOptions2d">
 					<property name="TransferFunction">
@@ -132,9 +136,55 @@
 				</property>
 			</property>
 		</property>
+		<property name="Data">
+			<param name="topDown">1</param>
+			<param name="original">1</param>
+			<param name="blockId">1</param>
+			<param name="uid">data3</param>
+			<param name="name">Sweep from CSV (quaternion driven, convex)</param>
+			<property name="MetaData">
+				<param name="topDown">1</param>
+			</property>
+			<property name="Components">
+				<property name="DisplayOptions2d">
+					<property name="TransferFunction">
+						<param name="window">255</param>
+						<param name="level">127.5</param>
+						<param name="mode">0</param>
+					</property>
+				</property>
+				<property name="DisplayOptions3d">
+					<property name="TransferFunction">
+						<param name="window">255</param>
+						<param name="level">127.5</param>
+						<param name="mode">0</param>
+						<property name="Tissues">
+							<property name="Tissue">
+								<property name="KeyPoint">
+									<param name="position">0.2</param>
+									<param name="color">0.1 0.05 0 0.35 </param>
+								</property>
+								<property name="KeyPoint">
+									<param name="position">0.6</param>
+									<param name="color">1 1 1 0.5 </param>
+								</property>
+								<property name="KeyPoint">
+									<param name="position">0.65</param>
+									<param name="color">1 0.8 0.5 0.8 </param>
+								</property>
+								<property name="KeyPoint">
+									<param name="position">1</param>
+									<param name="color">1 0.9 0.7 0.8 </param>
+								</property>
+							</property>
+						</property>
+					</property>
+				</property>
+			</property>
+		</property>
 	</property>
 	<property name="Interface">
-		<param name="outputUids">"data0" "data1" </param>
+		<param name="outputUids">"data0" "data1" "data3" </param>
 		<param name="inputUids"/>
 	</property>
 	<property name="Algorithms">
@@ -162,6 +212,18 @@
 			<param name="execute">1</param>
 			<param name="inputUids">"2" </param>
 			<param name="outputUids">"data2" </param>
+		</property>
+		<property name="IO.ImFusionFileIo">
+			<param name="location">Sweep from CSV (quaternion driven, convex)_new_new.imf</param>
+			<param name="execute">1</param>
+			<param name="inputUids">"2" </param>
+			<param name="outputUids">"data3" </param>
+		</property>
+		<property name="IO.ImFusionFileIo">
+			<param name="location">segm_relabel_therightone.imf</param>
+			<param name="execute">1</param>
+			<param name="inputUids">"data0" </param>
+			<param name="outputUids"/>
 		</property>
 	</property>
 	<property name="Annotations">
@@ -612,7 +674,7 @@
 				<param name="sceneCenter">2.03074645996104 -126.663219928742 -186.377990722656 </param>
 				<param name="ssaoMode">1</param>
 				<property name="Camera">
-					<param name="poseMatrix">0.884202497321754 0.222791187002908 0.410548451128259 101.843956643285 -0.0567621917448908 0.923658372266189 -0.37898979528596 55.2502310035944 -0.46364210045928 0.311800093547798 0.829347155505637 -203.132335992492 -0 0 -0 1 </param>
+					<param name="poseMatrix">0.438609422203968 0.392141476556751 0.80860796256146 198.38882810288 0.0504751617786926 0.88760526852369 -0.457830913473964 35.7716077248934 -0.897259178162762 0.241623570151761 0.369518629503034 -296.842470817039 -0 0 0 1 </param>
 					<param name="focalLength">1.37373870972731 1.37373870972731 </param>
 				</property>
 				<property name="VolumeRenderer">
@@ -628,19 +690,19 @@
 		</property>
 		<property name="VisibleData">
 			<property name="0">
-				<param name="visible">"2" </param>
+				<param name="visible">"data3" </param>
 			</property>
 			<property name="1">
-				<param name="visible">"2" "data0" </param>
+				<param name="visible">"data3" "data0" </param>
 			</property>
 			<property name="2">
-				<param name="visible">"2" "data0" </param>
+				<param name="visible">"data3" "data0" </param>
 			</property>
 			<property name="3">
-				<param name="visible">"2" "data0" </param>
+				<param name="visible">"data3" "data0" </param>
 			</property>
 			<property name="4">
-				<param name="visible">"2" "data0" </param>
+				<param name="visible">"data3" "data0" </param>
 			</property>
 		</property>
 	</property>
