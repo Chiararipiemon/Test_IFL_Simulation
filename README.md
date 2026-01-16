@@ -167,3 +167,24 @@ python3 src/iiwa_probe_utils/scripts/4_nov/pre_to_pose_touch_and_sweep_fixedZ.py
   _allow_partial:=true \
   _min_partial_fraction:=0.10
 ```
+### Execute serpentine raster scan
+```
+ROS_NAMESPACE=/iiwa \
+python3 ~/iiwa_stack_ws/src/iiwa_probe_utils/scripts/15Jan/raster_serpentine_scan.py \
+  _cloud_topic:=/skin_cloud \
+  _raster_enable:=true \
+  _raster_style:=cross \
+  _sweep_length:=0.20 \
+  _raster_width:=0.06 \
+  _raster_line_spacing:=0.006 \
+  _samples_per_line:=40 \
+  _raster_bridge_samples:=12 \
+  _sweep_pref_dir:='[0,1,0]' \
+  _fixed_z_dir:='[0,0,-1]' \
+  _fixed_flip_to_face_target:=true \
+  _approach_dist:=0.03 \
+  _retreat_dist:=0.06 \
+  _ik_timeout:=3.0 \
+  _allow_partial:=true \
+  _min_partial_fraction:=0.10
+```
