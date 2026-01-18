@@ -29,3 +29,5 @@ Poi dentro la console python imfusion:
 ```
 import runpy; runpy.run_path("/home/chiararipiemo/iiwa_stack_ws/src/iiwa_probe_utils/Hybrid_simulation/sweeps_for_hus.py", run_name="__main__")
 ```
+In questa foto transducer spline e direction spline:
+<img width="816" height="610" alt="immagine" src="https://github.com/user-attachments/assets/641c2057-c372-4b06-8eef-b7aace0cc14e" />
