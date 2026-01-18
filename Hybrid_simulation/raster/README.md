@@ -20,4 +20,7 @@ python3 ~/iiwa_stack_ws/src/iiwa_probe_utils/scripts/18Jan/raster_serpentine_sca
   _min_partial_fraction:=0.10
 ```
  La traiettoria è:
+ 
   <img width="596" height="455" alt="output(4)" src="https://github.com/user-attachments/assets/c87c3cfe-2ea5-4a66-8da2-03cb173471ca" />
+<img width="795" height="719" alt="Schermata del 2026-01-18 17-01-38" src="https://github.com/user-attachments/assets/86977823-1f7e-4557-89f1-bee5ac348dff" />
+Poi dentro la console imfusion:
