@@ -23,7 +23,9 @@ python3 ~/iiwa_stack_ws/src/iiwa_probe_utils/scripts/18Jan/raster_serpentine_sca
  
 <img width="596" height="455" alt="output(4)" src="https://github.com/user-attachments/assets/c87c3cfe-2ea5-4a66-8da2-03cb173471ca" />
 <img width="795" height="719" alt="Schermata del 2026-01-18 17-01-38" src="https://github.com/user-attachments/assets/86977823-1f7e-4557-89f1-bee5ac348dff" />
+
 Poi dentro la console python imfusion:
+
 ```
 import runpy; runpy.run_path("/home/chiararipiemo/iiwa_stack_ws/src/iiwa_probe_utils/Hybrid_simulation/sweeps_for_hus.py", run_name="__main__")
 ```
