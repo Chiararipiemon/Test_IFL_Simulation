@@ -11,3 +11,5 @@ python3 confidence_map_monai.py
 python3 test_monai.py
 
 ```
+<img width="283" height="424" alt="image" src="https://github.com/user-attachments/assets/fe63d7d8-441e-4bd1-a135-07bdb6da4a05" />
+
