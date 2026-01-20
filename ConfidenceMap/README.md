@@ -3,3 +3,11 @@ Our raw frames are stored as (H, W) = (512, 128) and are normalized to [0, 1] pr
 
 <img width="264" height="387" alt="image" src="https://github.com/user-attachments/assets/2b234b3f-2580-43a7-8854-3441e4ea46ad" />
 <img width="373" height="455" alt="image" src="https://github.com/user-attachments/assets/d5f784e3-59eb-4273-b439-6a442cfb7ec0" />
+
+```
+cd /home/chiara_piemontese/iiwa_stack_ws/src/confidence_map/monai
+python3 test_2_first_monai.py
+python3 confidence_map_monai.py
+python3 test_monai.py
+
+```
