@@ -3,31 +3,31 @@
 """
 raster_serpentine_scan.py
 
-Touch → raster sweep → retract con orientazione FIXED-Z.
+Touch → raster sweep → retract with FIXED-Z orientation.
 
-Due stili raster:
-  1) raster_style="parallel" : serpentina fatta con lanes PARALLELE alla centerline
-  2) raster_style="cross"    : serpentina fatta con RIGHE trasversali perpendicolari alla centerline (come disegno)
+Two raster styles:
+  1) raster_style="parallel" : serpentine made with lanes PARALLEL to the centerline
+  2) raster_style="cross"    : serpentine made with TRANSVERSE rows perpendicular to the centerline (as drawn)
 
-Parametri principali:
-  ~sweep_length          : lunghezza centerline P0→PF (m)
-  ~raster_width          : lunghezza di ogni riga (m)
-  ~raster_line_spacing   : passo tra righe lungo centerline (m)
-  ~samples_per_line      : campioni per riga
-  ~raster_bridge_samples : campioni ponte tra righe
+Main parameters:
+  ~sweep_length          : centerline length P0→PF (m)
+  ~raster_width          : length of each row (m)
+  ~raster_line_spacing   : spacing between rows along the centerline (m)
+  ~samples_per_line      : samples per row
+  ~raster_bridge_samples : bridge samples between rows
 
-Miglioramento chiave (anti-frastagliato):
-- proiezione su superficie con MLS/PCA locale (piano sui k vicini) invece di nearest-point.
-- smoothing leggero + riproiezione per restare a contatto con la superficie.
+Key improvement (anti-jagged):
+- surface projection using local MLS/PCA (plane on the k nearest neighbors) instead of nearest-point.
+- light smoothing + re-projection to keep contact with the surface.
 
-Parametri MLS:
-  ~mls_enable (bool)   : abilita MLS (default True)
-  ~mls_k (int)         : numero vicini PCA (default 25)
-  ~mls_alpha (float)   : smoothing 0..1 (default 0.35). Più basso = più smooth
-  ~mls_reproject (bool): riproietta dopo smoothing (default True)
+MLS parameters:
+  ~mls_enable (bool)   : enable MLS (default True)
+  ~mls_k (int)         : number of PCA neighbors (default 25)
+  ~mls_alpha (float)   : smoothing 0..1 (default 0.35). Lower = smoother
+  ~mls_reproject (bool): reproject after smoothing (default True)
 
-Nota:
-- Se la cloud è MOLTO rada, prova mls_k=35..55.
+Note:
+- If the cloud is VERY sparse, try mls_k=35..55.
 """
 
 import sys
@@ -219,7 +219,7 @@ class PreToPoseAndTouchFixedZ(object):
         self.touch_and_sweep_fixedZ()
         rospy.signal_shutdown("done")
 
-    # ---------------- Cloud callback (robusto) ----------------
+    # ---------------- Cloud callback (robust) ----------------
     def cloud_cb(self, msg):
         try:
             fields = [f.name for f in msg.fields]
@@ -461,8 +461,8 @@ class PreToPoseAndTouchFixedZ(object):
     # ---------------- MLS projection (NEW) ----------------
     def project_mls(self, Pw, k=None):
         """
-        Proietta Pw sul piano locale stimato con PCA sui k vicini.
-        Restituisce (Pproj, n_plane).
+        Project Pw onto the local plane estimated with PCA on the k nearest neighbors.
+        Returns (Pproj, n_plane).
         """
         if self.points is None or len(self.points) == 0:
             return None, None
@@ -495,13 +495,13 @@ class PreToPoseAndTouchFixedZ(object):
 
     def project_to_surface(self, Pw):
         """
-        Wrapper: se MLS attivo usa MLS, altrimenti nearest-point.
+        Wrapper: if MLS is enabled use MLS, otherwise nearest-point.
         """
         if self.mls_enable:
             Pproj, _ = self.project_mls(Pw, k=self.mls_k)
             if Pproj is not None:
                 return Pproj
-        # fallback nearest
+        # nearest fallback
         idx = self.nearest_index(Pw)
         if idx is None:
             return None
@@ -509,8 +509,8 @@ class PreToPoseAndTouchFixedZ(object):
 
     def addP_surface(self, track, Pw):
         """
-        Aggiunge a track un punto proiettato sulla superficie,
-        con smoothing e riproiezione per evitare frastagliamento.
+        Add to track a point projected onto the surface,
+        with smoothing and re-projection to avoid jaggedness.
         """
         P1 = self.project_to_surface(Pw)
         if P1 is None:
@@ -618,7 +618,7 @@ class PreToPoseAndTouchFixedZ(object):
                 continue
             if last is None or np.linalg.norm(Pi - last) > 1e-4:
                 pts.append(Pi)
-                # normale: usa quella del nearest del Pi per coerenza
+                # normal: use the nearest-point normal of Pi for consistency
                 idx = self.nearest_index(Pi)
                 nors.append(self.normal_at(idx) if idx is not None else np.array([0, 0, 1.0]))
                 last = Pi
@@ -682,7 +682,7 @@ class PreToPoseAndTouchFixedZ(object):
         for li, lane in enumerate(lanes):
             pts_lane = lane if (li % 2) == 0 else lane[::-1]
             for P in pts_lane:
-                self.addP_surface(track, P)  # già su superficie
+                self.addP_surface(track, P)  # already on the surface
             if li < len(lanes) - 1 and bridgeS > 0:
                 nxt = lanes[li + 1]
                 pts_next = nxt if ((li + 1) % 2) == 0 else nxt[::-1]
@@ -695,7 +695,7 @@ class PreToPoseAndTouchFixedZ(object):
         return np.asarray(track, float) if len(track) >= 2 else None
 
     # ======================================================================
-    #  RASTER STYLE 2: CROSS (righe trasversali)
+    #  RASTER STYLE 2: CROSS (transverse rows)
     # ======================================================================
     def plan_serpentine_cross(self, P0, n0):
         row_spacing = max(1e-6, float(self.raster_line_spacing))
@@ -743,7 +743,7 @@ class PreToPoseAndTouchFixedZ(object):
                 if Pi is None:
                     continue
 
-                # smoothing locale anche dentro riga
+                # local smoothing also within each row
                 if last is not None and self.mls_alpha > 0.0:
                     Pi2 = self.mls_alpha * Pi + (1.0 - self.mls_alpha) * last
                     if self.mls_enable and self.mls_reproject:
@@ -776,10 +776,10 @@ class PreToPoseAndTouchFixedZ(object):
                 P_end = row[-1]
                 P_next = rows[k + 1][0]
 
-                # direzione di uscita (ultimi 2 punti della riga)
+                # exit direction (last 2 points of the row)
                 v_out = norm(row[-1] - row[-2]) if len(row) >= 2 else norm(P_next - P_end)
 
-                # punto di controllo (arrotonda la curva)
+                # control point (rounds the curve)
                 alpha = float(rospy.get_param("~bridge_alpha", 2.0 * self.raster_line_spacing))
                 C = P_end + alpha * v_out
 
@@ -905,7 +905,7 @@ class PreToPoseAndTouchFixedZ(object):
         else:
             rospy.logwarn("Retract non pianificabile, salto.")
 
-        # Back pre
+        # Back to pre-approach
         self.step_to_joints(self.pre_joints, self.fallback_steps_pre, "pre_approach")
         rospy.loginfo("Sequenza completata.")
 
