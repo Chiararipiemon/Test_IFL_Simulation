@@ -1,6 +1,6 @@
 Questa sezione è per generare la singola slice per validare il planner e simulare il comportamento della ultrasound machine.
 # Comandi
-1. open immfusion
+1. open imfusion suite
 2. aprire la python console
 3. eseguire
     ``` 
