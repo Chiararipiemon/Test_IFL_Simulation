@@ -1,8 +1,8 @@
 Questa sezione è per generare la singola slice per validare il planner e simulare il comportamento della ultrasound machine.
 
-Input: .csv with the pose of the probe_tip on the skin 
+*Input*: .csv with the pose of the probe_tip on the skin 
 
-Output: synthetic slice 
+*Output*: synthetic single slice 
 
 # Comandi
 1. open imfusion suite
