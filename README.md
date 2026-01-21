@@ -160,6 +160,7 @@ python3 src/iiwa_probe_utils/scripts/4_nov/pre_to_pose_touch_and_sweep_fixedZ.py
   _min_partial_fraction:=0.10
 ```
 ### Execute serpentine raster scan
+In this repo the code is inside Hybrid_simulation/raster
 ```
 source ~/iiwa_stack_ws/devel/setup.bash
 
