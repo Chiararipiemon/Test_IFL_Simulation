@@ -190,4 +190,8 @@ python3 ~/iiwa_stack_ws/src/iiwa_probe_utils/scripts/18Jan/raster_serpentine_sca
 ```
 What I obtain with this code is something like this:
 <img width="658" height="489" alt="image" src="https://github.com/user-attachments/assets/2fe2eb5d-4fed-4f90-b036-4ec80b12f49e" />
+Then, inside console python imfusion:
 
+```
+import runpy; runpy.run_path("/home/chiararipiemo/iiwa_stack_ws/src/iiwa_probe_utils/Hybrid_simulation/sweeps_for_hus.py", run_name="__main__")
+```
