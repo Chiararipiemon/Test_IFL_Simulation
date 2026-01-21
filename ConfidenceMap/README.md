@@ -13,3 +13,4 @@ python3 test_monai.py
 ```
 <img width="283" height="424" alt="image" src="https://github.com/user-attachments/assets/fe63d7d8-441e-4bd1-a135-07bdb6da4a05" />
 
+<img width="1388" height="1000" alt="image" src="https://github.com/user-attachments/assets/7234f215-70b5-4947-9998-e2db10b4bafa" />
