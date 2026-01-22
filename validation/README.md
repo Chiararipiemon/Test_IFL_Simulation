@@ -108,6 +108,7 @@ python3 ~/iiwa_stack_ws/src/us_planner/scripts/go_to_us_apex.py \
   _ori_tol_deg:=2.0
 ```
 right one:
+```
 ROS_NAMESPACE=iiwa \
 python3 ~/iiwa_stack_ws/src/us_planner/scripts/go_to_us_apex.py \
   _group_name:=manipulator \
@@ -125,7 +126,7 @@ python3 ~/iiwa_stack_ws/src/us_planner/scripts/go_to_us_apex.py \
   _planning_attempts:=20 \
   _pos_tol:=0.001 \
   _ori_tol_deg:=2.0
-
+```
 ### Record .csv of the probe_tip on the apex point
 ```
  rosrun us_planner export_probe_pose_Tfixed_for_imfusion.py \
@@ -133,8 +134,11 @@ python3 ~/iiwa_stack_ws/src/us_planner/scripts/go_to_us_apex.py \
      _base_frame:=world \
      _output_csv:=/home/chiararipiemo/pose_from_robot_for_imfusion.csv
 ```
-## Hybrid simulation
-Change the file get_sweep_from_csv_quaternion.py with the new .csv 
+### Hybrid simulation
+Change the file get_sweep_from_csv_quaternion.py with the new .csv and run inside the python console:
+```
+exec(open("/home/chiararipiemo/Hybrid_simulation_last_try/get_sweep_from_csv_quaternion.py", encoding="utf-8").read()); main()
+```
 ### Get us_best_pose with interaction mode
 ```
 ROS_NAMESPACE=/iiwa \
