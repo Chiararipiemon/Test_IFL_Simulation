@@ -134,7 +134,7 @@ python3 ~/iiwa_stack_ws/src/us_planner/scripts/go_to_us_best_pose.py \
   _best_pose_timeout:=10.0
 
 ```
-# Record .csv with /us_best_pose
+### Record .csv with /us_best_pose
 ```
 rosrun us_planner export_probe_pose_Tfixed_for_imfusion.py \
   _probe_frame:=probe_tip \
@@ -142,7 +142,7 @@ rosrun us_planner export_probe_pose_Tfixed_for_imfusion.py \
   _output_csv:=/home/chiararipiemo/pose_best_from_robot_for_imfusion.csv
 
 ```
-# RUn the validator recorder 
+### Run the validator recorder 
 ```
 ROS_NAMESPACE=/iiwa \
 python3 ~/iiwa_stack_ws/src/us_planner/scripts/us_pose_planner_validator.py \
