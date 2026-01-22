@@ -133,6 +133,8 @@ python3 ~/iiwa_stack_ws/src/us_planner/scripts/go_to_us_apex.py \
      _base_frame:=world \
      _output_csv:=/home/chiararipiemo/pose_from_robot_for_imfusion.csv
 ```
+## Hybrid simulation
+Change the file get_sweep_from_csv_quaternion.py with the new .csv 
 ### Get us_best_pose with interaction mode
 ```
 ROS_NAMESPACE=/iiwa \
