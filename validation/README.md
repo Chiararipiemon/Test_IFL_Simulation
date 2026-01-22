@@ -107,6 +107,25 @@ python3 ~/iiwa_stack_ws/src/us_planner/scripts/go_to_us_apex.py \
   _pos_tol:=0.001 \
   _ori_tol_deg:=2.0
 ```
+right one:
+ROS_NAMESPACE=iiwa \
+python3 ~/iiwa_stack_ws/src/us_planner/scripts/go_to_us_apex.py \
+  _group_name:=manipulator \
+  _ee_link:=iiwa_link_ee \
+  _ref_frame:=world \
+  _speed_scale:=0.2 \
+  _pre_joints:="[-2.529, 0.271, -0.268, 1.141, 2.932, 1.581, 0.174]" \
+  _target_joints:="[-0.176, 0.675, 0.008, -0.789, -0.004, 1.669, -0.169]" \
+  _tip_frame:=probe_tip \
+  _apex_topic:=/us_apex \
+  _apex_pose_topic:=/us_apex_pose \
+  _apex_timeout:=10.0 \
+  _contact_margin:=0.0 \
+  _planning_time:=15.0 \
+  _planning_attempts:=20 \
+  _pos_tol:=0.001 \
+  _ori_tol_deg:=2.0
+
 ### Record .csv of the probe_tip on the apex point
 ```
  rosrun us_planner export_probe_pose_Tfixed_for_imfusion.py \
