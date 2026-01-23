@@ -134,6 +134,14 @@ python3 ~/iiwa_stack_ws/src/us_planner/scripts/go_to_us_apex.py \
      _base_frame:=world \
      _output_csv:=/home/chiararipiemo/pose_from_robot_for_imfusion.csv
 ```
+right one: 
+```
+python3 record_us_apex_pose_imfusion_csv.py \
+  _topic:=/us_apex_pose \
+  _base_frame:=world \
+  _output_csv:=/home/chiararipiemo/validation/us_apex_pose_imfusion.csv \
+  _max_samples:=2000
+```
 ### Hybrid simulation
 Change the file get_sweep_from_csv_quaternion.py with the new .csv and run inside the python console:
 ```
