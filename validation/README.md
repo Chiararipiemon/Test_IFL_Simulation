@@ -187,6 +187,14 @@ python3 ~/iiwa_stack_ws/src/us_planner/scripts/go_to_us_best_pose.py \
 
 ```
 ### Record .csv with /us_best_pose
+right one:
+```
+python3 record_us_best_pose_imfusion_csv.py \
+  _topic:=/us_best_pose \
+  _base_frame:=world \
+  _output_csv:=/home/chiararipiemo/validation/us_best_pose_imfusion.csv \
+  _flush_every:=1
+```
 ```
 rosrun us_planner export_probe_pose_Tfixed_for_imfusion.py \
   _probe_frame:=probe_tip \
