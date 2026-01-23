@@ -178,7 +178,7 @@ python3 ~/iiwa_stack_ws/src/us_planner/scripts/us_pose_planner_confidence.py \
   _conf_mha_path:=/home/chiararipiemo/iiwa_stack_ws/src/us_planner/volume_confidence.mha \
   _conf_volume_frame:=imfusion \
   _T_imfusion_from_world_mm:="[[1,0,0,-642],[0,0,1,-364],[0,-1,0,-200],[0,0,0,1]]" \
-  _patch_radius_m:=0.030 \
+  _patch_radius_m:=0.1 \
   _n_apex_samples:=20 \
   _n_tilt_samples:=10 \
   _alpha_max_deg:=25.0 \
