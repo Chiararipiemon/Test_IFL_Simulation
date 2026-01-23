@@ -155,11 +155,11 @@ python3 ~/iiwa_stack_ws/src/us_planner/scripts/us_pose_planner_confidence.py \
   _conf_mha_path:=/home/chiararipiemo/iiwa_stack_ws/src/us_planner/volume_confidence.mha \
   _conf_volume_frame:=imfusion \
   _T_imfusion_from_world_mm:="[[1,0,0,-642],[0,0,1,-364],[0,-1,0,-200],[0,0,0,1]]" \
-  _patch_radius_m:=0.008 \
-  _n_apex_samples:=12 \
+  _patch_radius_m:=0.030 \
+  _n_apex_samples:=20 \
   _n_tilt_samples:=8 \
   _alpha_max_deg:=12.0 \
-  _theta_align_deg:=8.0 \
+  _theta_align_deg:=12.0 \
   _w_align:=1.2 \
   _w_move:=0.05 \
   _w_tilt:=0.15 \
