@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<propertyfile version="1.1" name="" comment="Written by ImFusionLib, 2026-01-26 09:16:41">
+	<param name="workspaceVersion">29</param>
+	<property name="Datasets">
+		<property name="Data">
+			<param name="topDown">1</param>
+			<param name="name">segm_relabel_therightone</param>
+			<param name="blockId">1</param>
+			<param name="original">1</param>
+			<param name="uid">data0</param>
+			<param name="transformation">-1 -6.12323413147183e-16 0 2.03074645996097 6.12323413147183e-16 -1 0 -126.663219928742 0 0 1 186.377990722656 0 0 0 1 </param>
+			<property name="MetaData">
+				<param name="topDown">1</param>
+			</property>
+			<property name="Components">
+				<property name="DisplayOptions2d">
+					<property name="TransferFunction">
+						<param name="window">255</param>
+						<param name="level">127.5</param>
+						<param name="mode">0</param>
+					</property>
+				</property>
+				<property name="DisplayOptions3d">
+					<property name="TransferFunction">
+						<param name="window">2774</param>
+						<param name="level">363</param>
+						<param name="presetName">CT Bone</param>
+						<param name="mode">0</param>
+						<property name="Tissues">
+							<property name="Tissue">
+								<property name="KeyPoint">
+									<param name="position">0.4</param>
+									<param name="color">0.752941176470588 0.250980392156863 0.125490196078431 0 </param>
+								</property>
+								<property name="KeyPoint">
+									<param name="position">0.475</param>
+									<param name="color">0.975 0.9 0.82 0.5 </param>
+								</property>
+								<property name="KeyPoint">
+									<param name="position">0.5</param>
+									<param name="color">1 1 1 0.6 </param>
+								</property>
+								<property name="KeyPoint">
+									<param name="position">1</param>
+									<param name="color">0.9 0.9 0.9 0.6 </param>
+								</property>
+							</property>
+						</property>
+					</property>
+				</property>
+				<property name="LabelDataComponent">
+					<property name="LabelConfig">
+						<param name="pixelValue">3</param>
+						<param name="snomedCategoryCodeValue"/>
+						<param name="snomedCategoryCodeMeaning"/>
+						<param name="snomedTypeCodeValue"/>
+						<param name="snomedTypeCodeMeaning"/>
+					</property>
+					<property name="LabelConfig">
+						<param name="pixelValue">6</param>
+						<param name="snomedCategoryCodeValue"/>
+						<param name="snomedCategoryCodeMeaning"/>
+						<param name="snomedTypeCodeValue"/>
+						<param name="snomedTypeCodeMeaning"/>
+					</property>
+					<property name="LabelConfig">
+						<param name="pixelValue">8</param>
+						<param name="isVisible3d">0</param>
+						<param name="snomedCategoryCodeValue"/>
+						<param name="snomedCategoryCodeMeaning"/>
+						<param name="snomedTypeCodeValue"/>
+						<param name="snomedTypeCodeMeaning"/>
+					</property>
+					<property name="LabelConfig">
+						<param name="pixelValue">12</param>
+						<param name="isVisible2d">0</param>
+						<param name="isVisible3d">0</param>
+						<param name="snomedCategoryCodeValue"/>
+						<param name="snomedCategoryCodeMeaning"/>
+						<param name="snomedTypeCodeValue"/>
+						<param name="snomedTypeCodeMeaning"/>
+					</property>
+					<property name="LabelConfig">
+						<param name="pixelValue">13</param>
+						<param name="snomedCategoryCodeValue"/>
+						<param name="snomedCategoryCodeMeaning"/>
+						<param name="snomedTypeCodeValue"/>
+						<param name="snomedTypeCodeMeaning"/>
+					</property>
+				</property>
+			</property>
+		</property>
+		<property name="Data">
+			<param name="uid">data1</param>
+			<param name="name">Segmentation_decimated_better_points_mm</param>
+		</property>
+		<property name="Data">
+			<param name="topDown">1</param>
+			<param name="original">1</param>
+			<param name="blockId">1</param>
+			<param name="uid">data2</param>
+			<param name="name">9.apex_fake</param>
+			<property name="MetaData">
+				<param name="topDown">1</param>
+			</property>
+			<property name="Components">
+				<property name="DisplayOptions2d">
+					<property name="TransferFunction">
+						<param name="window">255</param>
+						<param name="level">127.5</param>
+						<param name="mode">0</param>
+					</property>
+				</property>
+				<property name="DisplayOptions3d">
+					<property name="TransferFunction">
+						<param name="window">255</param>
+						<param name="level">127.5</param>
+						<param name="mode">0</param>
+						<property name="Tissues">
+							<property name="Tissue">
+								<property name="KeyPoint">
+									<param name="position">0.2</param>
+									<param name="color">0.1 0.05 0 0.35 </param>
+								</property>
+								<property name="KeyPoint">
+									<param name="position">0.6</param>
+									<param name="color">1 1 1 0.5 </param>
+								</property>
+								<property name="KeyPoint">
+									<param name="position">0.65</param>
+									<param name="color">1 0.8 0.5 0.8 </param>
+								</property>
+								<property name="KeyPoint">
+									<param name="position">1</param>
+									<param name="color">1 0.9 0.7 0.8 </param>
+								</property>
+							</property>
+						</property>
+					</property>
+				</property>
+			</property>
+		</property>
+	</property>
+	<property name="Interface">
+		<param name="outputUids">"data0" "data1" "data2" </param>
+		<param name="inputUids"/>
+	</property>
+	<property name="Algorithms">
+		<property name="IO.ImFusionFileIo">
+			<param name="location">../../../Hybrid_simulation_last_try/segm_relabel_therightone.imf</param>
+			<param name="execute">1</param>
+			<param name="inputUids"/>
+			<param name="outputUids">"data0" </param>
+		</property>
+		<property name="IO.PointCloudIo">
+			<param name="location">../../../iiwa_stack_ws/src/iiwa_probe_utils/cloudpoint/Segmentation_decimated_better_points_mm.pcd</param>
+			<param name="saveBinary">0</param>
+			<param name="saveCompressed">54</param>
+			<param name="saveColors">0</param>
+			<param name="saveLabels">0</param>
+			<param name="execute">1</param>
+			<param name="inputUids"/>
+			<param name="outputUids">"data1" </param>
+		</property>
+		<property name="IO.ImFusionFileIo">
+			<param name="location">9.apex_fake</param>
+			<param name="execute">1</param>
+			<param name="inputUids">"2" </param>
+			<param name="outputUids">"data2" </param>
+		</property>
+	</property>
+	<property name="Annotations">
+		<property name="GlPointCloud">
+			<param name="editable">1</param>
+			<param name="color">1 1 0 1 </param>
+			<param name="lineWidth">1</param>
+			<param name="labelVisible">1</param>
+			<param name="labelBackgroundVisible">0</param>
+			<param name="labelBackgroundColor">0.3 0.3 0.3 0.7 </param>
+			<param name="labelBackgroundMargin">3</param>
+			<param name="labelDepthTest">1</param>
+			<param name="labelColor">0 1 1 </param>
+			<param name="labelText"/>
+			<param name="name">Segmentation_decimated_better_points_mm</param>
+			<param name="pointSize">2</param>
+			<param name="drawLines">0</param>
+			<param name="drawNormals">0</param>
+			<param name="colorWithNormals">0</param>
+			<param name="poseLinked">0</param>
+			<param name="referenceDataUid">data1</param>
+		</property>
+		<property name="GlPoint">
+			<param name="editable">1</param>
+			<param name="color">1 0 0 1 </param>
+			<param name="lineWidth">1</param>
+			<param name="labelVisible">1</param>
+			<param name="labelBackgroundVisible">0</param>
+			<param name="labelBackgroundColor">0.3 0.3 0.3 0.7 </param>
+			<param name="labelBackgroundMargin">3</param>
+			<param name="labelDepthTest">1</param>
+			<param name="labelColor">0 1 1 </param>
+			<param name="labelText">TARGET 9</param>
+			<param name="name">TARGET 9</param>
+			<param name="points">31.73268699646 -61.5772972106934 -91.7095489501953 
+ </param>
+			<param name="maxPoints">1</param>
+			<param name="pointColor">1 0 0 1 </param>
+			<param name="poseLinked">0</param>
+		</property>
+	</property>
+	<property name="Display">
+		<param name="layoutMode">0</param>
+		<param name="focusedView">0</param>
+		<param name="viewOrder">0 1 2 3 4 </param>
+		<property name="Views">
+			<property name="0">
+				<param name="isVisible">1</param>
+				<param name="flip">1</param>
+				<param name="showZoom">1</param>
+			</property>
+			<property name="1">
+				<param name="isVisible">1</param>
+				<param name="flip">1</param>
+				<param name="showZoom">1</param>
+				<param name="viewMatrix">1 0 0 2.03074645996105 0 1 0 -126.663219928742 0 0 1 -186.377990722656 0 0 0 1 </param>
+				<param name="sliceMatrix">1 0 0 2.03074645996105 0 1 0 -126.663219928742 0 0 1 -186.377990722656 0 0 0 1 </param>
+			</property>
+			<property name="2">
+				<param name="isVisible">1</param>
+				<param name="flip">1</param>
+				<param name="showZoom">1</param>
+				<param name="viewMatrix">0 0 -1 2.03074645996105 1 0 0 -126.663219928742 0 -1 0 -186.377990722656 0 0 0 1 </param>
+				<param name="sliceMatrix">0 0 -1 2.03074645996105 1 0 0 -126.663219928742 0 -1 0 -186.377990722656 0 0 0 1 </param>
+			</property>
+			<property name="3">
+				<param name="isVisible">1</param>
+				<param name="flip">1</param>
+				<param name="showZoom">1</param>
+				<param name="viewMatrix">1 0 0 2.03074645996105 0 0 1 -126.663219928742 0 -1 0 -186.377990722656 0 0 0 1 </param>
+				<param name="sliceMatrix">1 0 0 2.03074645996105 0 0 1 -126.663219928742 0 -1 0 -186.377990722656 0 0 0 1 </param>
+			</property>
+			<property name="4">
+				<param name="isVisible">1</param>
+				<param name="volumeRendererName">General Purpose Volume Renderer</param>
+				<param name="sceneCenter">2.03074645996105 -126.663219928742 -186.377990722656 </param>
+				<param name="ssaoMode">1</param>
+				<property name="Camera">
+					<param name="poseMatrix">0.943005847646781 0.124733616130562 -0.308514985553321 -43.6162474496358 -0.203095349388235 0.950133994286168 -0.236638272387798 76.6553005061291 0.263613828091096 0.285809233421185 0.921314730008346 -29.1738844035922 -0 0 0 1 </param>
+					<param name="focalLength">1.37373870972731 1.37373870972731 </param>
+				</property>
+				<property name="VolumeRenderer">
+					<param name="maxVolumesToDisplay">4</param>
+					<param name="mode">4</param>
+					<param name="ambientAttenuationDistance">0</param>
+				</property>
+				<property name="SSAO">
+					<param name="ssaoStrength">0.75</param>
+					<param name="occlusionRadius">21</param>
+				</property>
+			</property>
+		</property>
+		<property name="VisibleData">
+			<property name="0">
+				<param name="visible">"data2" </param>
+			</property>
+			<property name="1">
+				<param name="visible">"data2" "data0" </param>
+			</property>
+			<property name="2">
+				<param name="visible">"data2" "data0" </param>
+			</property>
+			<property name="3">
+				<param name="visible">"data2" "data0" </param>
+			</property>
+			<property name="4">
+				<param name="visible">"data2" "data0" </param>
+			</property>
+		</property>
+	</property>
+</propertyfile>
