@@ -231,6 +231,47 @@ ROS_NAMESPACE=/iiwa python3 ~/iiwa_stack_ws/src/us_planner/scripts/us_pose_plann
   _interactive_mode:=console \
   _max_user_options:=5
 ```
+PLANNER 2
+```
+source ~/iiwa_stack_ws/devel/setup.bash
+
+ROS_NAMESPACE=/iiwa rosrun us_planner us_pose_planner_confidence_new.py \
+  _cloud_topic:=/skin_cloud \
+  _target_topic:=/us_target_viz \
+  _apex_pose_topic:=/us_apex_pose \
+  _best_pose_topic:=/us_best_pose \
+  _conf_mha_path:=/home/chiararipiemo/iiwa_stack_ws/src/us_planner/volume_confidence.mha \
+  _conf_volume_frame:=imfusion \
+  _T_imfusion_from_world_mm:="[[1,0,0,-642],[0,0,1,-364],[0,-1,0,-200],[0,0,0,1]]" \
+  _patch_radius_m:=0.030 \
+  _shift_max_mm:=35.0 \
+  _alpha_max_deg:=20.0 \
+  _delta_theta_max_deg:=18.0 \
+  _theta_align_max_deg:=15.0 \
+  _theta_align_deg:=12.0 \
+  _tilt_jitter_deg:=10.0 \
+  _n_dir_samples:=15 \
+  _beta_to_target:=0.75 \
+  _n_apex_samples:=35 \
+  _n_yaw_samples:=4 \
+  _use_yaw_list:=true \
+  _yaw_deg_list:="[0.0, 45.0, 90.0, 135.0]" \
+  _conf_agg:=mean \
+  _conf_p_quantile:=0.98 \
+  _conf_target_radius_mm:=8.0 \
+  _conf_target_samples:=20 \
+  _w_ray:=1.0 \
+  _w_tgt:=0.5 \
+  _w_align:=1.2 \
+  _w_fov:=0.2 \
+  _w_tilt:=0.15 \
+  _w_move:=0.05 \
+  _y_plane_max_mm:=6.0 \
+  _w_outplane:=0.6 \
+  _outplane_hard:=false \
+  _interactive_mode:=console \
+  _max_user_options:=5
+```
 ### Go to /us_best_pose
 ```
 ROS_NAMESPACE=iiwa \
