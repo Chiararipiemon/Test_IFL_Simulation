@@ -4,7 +4,7 @@ This section is used to generate a single slice to validate the planner and simu
 
 *Output*: synthetic single slice 
 
-# Comandi
+# To do:
 1. open imfusion suite
 2. open python console
 3. run
