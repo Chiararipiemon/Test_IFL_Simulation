@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<propertyfile version="1.1" name="" comment="Written by ImFusionLib, 2026-02-02 09:26:36">
+<propertyfile version="1.1" name="" comment="Written by ImFusionLib, 2026-02-02 09:35:37">
 	<param name="workspaceVersion">29</param>
 	<property name="Datasets">
 		<property name="Data">
@@ -90,9 +90,55 @@
 			<param name="uid">data1</param>
 			<param name="name">Segmentation_decimated_better_points_mm</param>
 		</property>
+		<property name="Data">
+			<param name="topDown">1</param>
+			<param name="original">1</param>
+			<param name="blockId">1</param>
+			<param name="uid">data6</param>
+			<param name="name">11_apex_fake</param>
+			<property name="MetaData">
+				<param name="topDown">1</param>
+			</property>
+			<property name="Components">
+				<property name="DisplayOptions2d">
+					<property name="TransferFunction">
+						<param name="window">255</param>
+						<param name="level">127.5</param>
+						<param name="mode">0</param>
+					</property>
+				</property>
+				<property name="DisplayOptions3d">
+					<property name="TransferFunction">
+						<param name="window">255</param>
+						<param name="level">127.5</param>
+						<param name="mode">0</param>
+						<property name="Tissues">
+							<property name="Tissue">
+								<property name="KeyPoint">
+									<param name="position">0.2</param>
+									<param name="color">0.1 0.05 0 0.35 </param>
+								</property>
+								<property name="KeyPoint">
+									<param name="position">0.6</param>
+									<param name="color">1 1 1 0.5 </param>
+								</property>
+								<property name="KeyPoint">
+									<param name="position">0.65</param>
+									<param name="color">1 0.8 0.5 0.8 </param>
+								</property>
+								<property name="KeyPoint">
+									<param name="position">1</param>
+									<param name="color">1 0.9 0.7 0.8 </param>
+								</property>
+							</property>
+						</property>
+					</property>
+				</property>
+			</property>
+		</property>
 	</property>
 	<property name="Interface">
-		<param name="outputUids">"data0" "data1" </param>
+		<param name="outputUids">"data0" "data1" "data6" </param>
 		<param name="inputUids"/>
 	</property>
 	<property name="Algorithms">
@@ -153,6 +199,23 @@
 			<param name="inputUids">"data4" </param>
 			<param name="outputUids"/>
 		</property>
+		<property name="IO.ImFusionFileIo">
+			<param name="location">11_apex_fake.imf</param>
+			<param name="execute">1</param>
+			<param name="inputUids">"2" </param>
+			<param name="outputUids">"data5" </param>
+		</property>
+		<property name="Delete Data">
+			<param name="execute">1</param>
+			<param name="inputUids">"data5" </param>
+			<param name="outputUids">"data6" </param>
+		</property>
+		<property name="IO.ImFusionFileIo">
+			<param name="location">11_apex_fake.imf</param>
+			<param name="execute">1</param>
+			<param name="inputUids">"data6" </param>
+			<param name="outputUids"/>
+		</property>
 	</property>
 	<property name="Annotations">
 		<property name="GlPointCloud">
@@ -184,9 +247,9 @@
 			<param name="labelBackgroundMargin">3</param>
 			<param name="labelDepthTest">1</param>
 			<param name="labelColor">0 1 1 </param>
-			<param name="labelText">Label</param>
-			<param name="name">Label</param>
-			<param name="points">-12.9040651321411 -78.526725769043 -43.5697937011719 
+			<param name="labelText">Label 1</param>
+			<param name="name">Label 1</param>
+			<param name="points">-12.8444786071777 -80.0011291503906 -64.6682434082031 
  </param>
 			<param name="maxPoints">1</param>
 			<param name="pointColor">1 0 0 1 </param>
@@ -199,13 +262,14 @@
 		<param name="viewOrder">0 1 2 3 4 </param>
 		<property name="Views">
 			<property name="0">
-				<param name="isVisible">0</param>
+				<param name="isVisible">1</param>
 				<param name="flip">1</param>
 				<param name="showZoom">1</param>
 			</property>
 			<property name="1">
 				<param name="isVisible">1</param>
 				<param name="flip">1</param>
+				<param name="zoom">0.831104283852126</param>
 				<param name="showZoom">1</param>
 				<param name="viewMatrix">1 0 0 2.03064155578621 0 1 0 -126.663296222687 0 0 1 -186.377990722656 0 0 0 1 </param>
 				<param name="sliceMatrix">1 0 0 2.03064155578621 0 1 0 -126.663296222687 0 0 1 -186.377990722656 0 0 0 1 </param>
@@ -213,6 +277,7 @@
 			<property name="2">
 				<param name="isVisible">1</param>
 				<param name="flip">1</param>
+				<param name="zoom">0.831104283852126</param>
 				<param name="showZoom">1</param>
 				<param name="viewMatrix">0 0 -1 2.03064155578621 1 0 0 -126.663296222687 0 -1 0 -186.377990722656 0 0 0 1 </param>
 				<param name="sliceMatrix">0 0 -1 2.03064155578621 1 0 0 -126.663296222687 0 -1 0 -186.377990722656 0 0 0 1 </param>
@@ -220,6 +285,7 @@
 			<property name="3">
 				<param name="isVisible">1</param>
 				<param name="flip">1</param>
+				<param name="zoom">0.831104283852126</param>
 				<param name="showZoom">1</param>
 				<param name="viewMatrix">1 0 0 2.03064155578621 0 0 1 -126.663296222687 0 -1 0 -186.377990722656 0 0 0 1 </param>
 				<param name="sliceMatrix">1 0 0 2.03064155578621 0 0 1 -126.663296222687 0 -1 0 -186.377990722656 0 0 0 1 </param>
@@ -230,7 +296,7 @@
 				<param name="sceneCenter">2.03064155578621 -126.663296222687 -186.377990722656 </param>
 				<param name="ssaoMode">1</param>
 				<property name="Camera">
-					<param name="poseMatrix">0.706548594341913 0.298226094047147 -0.641755623787474 -83.2695705416989 -0.64950029950073 0.633329655067653 -0.420764671711336 3.11724992447086 0.280959863293545 0.714111157202623 0.641176114945654 -391.607636103271 -0 0 0 1 </param>
+					<param name="poseMatrix">0.74036327726712 0.0191850300206795 0.67193314570528 126.160176299857 0.231007552239427 0.931451757659386 -0.281128322944501 65.1155243966493 -0.631266764912136 0.363358717765714 0.685180789092205 -96.9497862055247 -0 0 0 1 </param>
 					<param name="focalLength">1.37373870972731 1.37373870972731 </param>
 				</property>
 				<property name="VolumeRenderer">
@@ -246,19 +312,19 @@
 		</property>
 		<property name="VisibleData">
 			<property name="0">
-				<param name="visible"/>
+				<param name="visible">"data6" </param>
 			</property>
 			<property name="1">
-				<param name="visible">"data0" </param>
+				<param name="visible">"data0" "data6" </param>
 			</property>
 			<property name="2">
-				<param name="visible">"data0" </param>
+				<param name="visible">"data0" "data6" </param>
 			</property>
 			<property name="3">
-				<param name="visible">"data0" </param>
+				<param name="visible">"data0" "data6" </param>
 			</property>
 			<property name="4">
-				<param name="visible">"data0" </param>
+				<param name="visible">"data0" "data6" </param>
 			</property>
 		</property>
 	</property>
