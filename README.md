@@ -1,4 +1,5 @@
 # Test_IFL_Simulation
+In this GitHUb repo there are two main workflow/todo list to follow. The first one (the one you can see in this README) is for setting up the simulation environment and obtain all the priors that you need for running the probe pose optimization planner. The second one is inside the directory **validation* for running everything during the experimental phase.
 ## Set up and requirements
 This repo works with Ubuntu 20.04 and ROS Noetic. Most of the files are connected and based on ***https://github.com/IFL-CAMP/iiwa_stack***.
 ### Load iiwa_stack
