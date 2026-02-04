@@ -307,6 +307,7 @@ rosrun us_planner export_probe_pose_Tfixed_for_imfusion.py \
 
 ```
 ### Run the validator recorder 
+serpentine:
 ```
 ROS_NAMESPACE=/iiwa \
 python3 ~/iiwa_stack_ws/src/us_planner/scripts/us_pose_planner_validator.py \
@@ -325,4 +326,25 @@ python3 ~/iiwa_stack_ws/src/us_planner/scripts/us_pose_planner_validator.py \
   _baseline_mode:=pca \
   _normal_k:=30 \
   _csv_path:=/home/chiararipiemo/iiwa_stack_ws/src/us_planner/validation_results.csv
+```
+linear:
+```
+ROS_NAMESPACE=/iiwa \
+python3 ~/iiwa_stack_ws/src/us_planner/scripts/us_pose_planner_validator.py \
+  _cloud_topic:=/skin_cloud \
+  _target_topic:=/us_target_viz \
+  _apex_pose_topic:=/us_apex_pose \
+  _best_pose_topic:=/us_best_pose \
+  _conf_mha_path:=/home/chiararipiemo/iiwa_stack_ws/src/us_planner/confidence_volume_linear.mha \
+  _conf_volume_frame:=imfusion \
+  _T_imfusion_from_world_mm:="[[1,0,0,-642],[0,0,1,-364],[0,-1,0,-200],[0,0,0,1]]" \
+  _conf_agg:=p95 \
+  _conf_p_quantile:=0.98 \
+  _ray_step_mm:=2.0 \
+  _conf_target_radius_mm:=8.0 \
+  _conf_target_samples:=20 \
+  _baseline_mode:=pca \
+  _normal_k:=30 \
+  _csv_path:=/home/chiararipiemo/validation/Test_3/csv_validator/csv_3_planner_2.csv
+
 ```
