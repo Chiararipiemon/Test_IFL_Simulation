@@ -345,6 +345,6 @@ python3 ~/iiwa_stack_ws/src/us_planner/scripts/us_pose_planner_validator.py \
   _conf_target_samples:=20 \
   _baseline_mode:=pca \
   _normal_k:=30 \
-  _csv_path:=/home/chiararipiemo/validation/Test_3/csv_validator/csv_3_planner_2.csv
+  _csv_path:=/home/chiararipiemo/validation/Test_3/csv_validator/csv_4_planner_2.csv
 
 ```
