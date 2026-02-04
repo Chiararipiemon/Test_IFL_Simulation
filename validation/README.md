@@ -241,7 +241,7 @@ source ~/iiwa_stack_ws/devel/setup.bash
 
 ROS_NAMESPACE=/iiwa python3 ~/iiwa_stack_ws/src/us_planner/scripts/us_pose_planner_confidence_linear.py \
   _cloud_topic:=/skin_cloud \
-  _conf_mha_path:=/home/chiararipiemo/iiwa_stack_ws/src/us_planner/volume_confidence_linear.mha \
+  _conf_mha_path:=/home/chiararipiemo/iiwa_stack_ws/src/us_planner/confidence_volume_linear.mha \
   _conf_volume_frame:=imfusion \
   _T_imfusion_from_world_mm:="[[1,0,0,-642],[0,0,1,-364],[0,-1,0,-200],[0,0,0,1]]" \
   _patch_radius_m:=0.030 \
